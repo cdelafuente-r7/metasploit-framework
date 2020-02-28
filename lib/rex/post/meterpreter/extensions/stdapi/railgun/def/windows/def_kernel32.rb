@@ -362,7 +362,7 @@ class Def_windows_kernel32
       ["PWCHAR","lpName","in"],
       ])
 
-    dll.add_function( 'CreateFileW', 'DWORD',[
+    dll.add_function( 'CreateFileW', 'HANDLE',[
       ["PWCHAR","lpFileName","in"],
       ["DWORD","dwDesiredAccess","in"],
       ["DWORD","dwShareMode","in"],

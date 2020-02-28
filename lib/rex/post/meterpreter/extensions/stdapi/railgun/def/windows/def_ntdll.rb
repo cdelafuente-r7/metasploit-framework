@@ -158,6 +158,18 @@ class Def_windows_ntdll
       ["PBLOB","ReturnValue","in"],
       ])
 
+    dll.add_function('RtlInitUnicodeString', 'VOID',[
+      ["PBLOB","DestinationString","out"],
+      ["PWCHAR","SourceString","in"]
+      ])
+
+    dll.add_function('NtCreateSymbolicLinkObject', 'DWORD',[
+      ["PDWORD","LinkHandle","out"],
+      ["DWORD","DesiredAccess","in"],
+      ["PBLOB","ObjectAttributes","in"],
+      ["PWCHAR","TargetName","in"]
+      ])
+
     return dll
   end
 

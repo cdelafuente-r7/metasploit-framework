@@ -51,7 +51,7 @@ module PacketDispatcher
   # latency networks
   #
   # @see #keepalive
-  PING_TIME = 60
+  PING_TIME = 200000
 
   # This mutex is used to lock out new commands during an
   # active migration. Unused if this is a passive dispatcher

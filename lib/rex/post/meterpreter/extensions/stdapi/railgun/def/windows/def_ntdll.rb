@@ -165,9 +165,9 @@ class Def_windows_ntdll
 
     dll.add_function('NtCreateSymbolicLinkObject', 'DWORD',[
       ["PDWORD","LinkHandle","out"],
-      ["DWORD","DesiredAccess","in"],
-      ["PBLOB","ObjectAttributes","in"],
-      ["PWCHAR","TargetName","in"]
+      ["DWORD","DesiredAccess","in"], # ACCESS_MASK
+      ["PBLOB","ObjectAttributes","in"], # POBJECT_ATTRIBUTES
+      ["PBLOB","TargetName","in"] # PUNICODE_STRING
       ])
 
     return dll

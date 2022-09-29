@@ -14,7 +14,7 @@ class MetasploitModule < Msf::Auxiliary
     super(
       update_info(
         info,
-        'Name' => 'Certifried',
+        'Name' => 'Active Directory Certificate Services (ADCS) privilege escalation (Certifried)',
         'Description' => %q{
           This module exploits a privilege escalation vulnerability in Active
           Directory Certificate Services (ADCS) to generate a valid certificate

@@ -6,7 +6,7 @@
 require 'ruby_smb/dcerpc/client'
 
 class MetasploitModule < Msf::Auxiliary
-  include Msf::Exploit::Remote::MsAdcs
+  include Msf::Exploit::Remote::MsIcpr
 
   def initialize(info = {})
     super(
@@ -40,15 +40,15 @@ class MetasploitModule < Msf::Auxiliary
 
   def run
     send("action_#{action.name.downcase}")
-  rescue MsAdcsConnectionError => e
+  rescue MsIcprConnectionError => e
     fail_with(Failure::Unreachable, e.message)
-  rescue MsAdcsAuthentcationError => e
+  rescue MsIcprAuthentcationError => e
     fail_with(Failure::NoAccess, e.message)
-  rescue MsAdcsNotFoundError => e
+  rescue MsIcprNotFoundError => e
     fail_with(Failure::NotFound, e.message)
-  rescue MsAdcsUnexpectedReplyError => e
+  rescue MsIcprUnexpectedReplyError => e
     fail_with(Failure::UnexpectedReply, e.message)
-  rescue MsAdcsUnknownError => e
+  rescue MsIcprUnknownError => e
     fail_with(Failure::Unknown, e.message)
   end
 

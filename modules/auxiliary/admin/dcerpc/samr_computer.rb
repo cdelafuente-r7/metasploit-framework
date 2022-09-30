@@ -9,7 +9,7 @@ class MetasploitModule < Msf::Auxiliary
   include Msf::Exploit::Remote::SMB::Client::Authenticated
   include Msf::Exploit::Remote::DCERPC
   include Msf::Auxiliary::Report
-  include Msf::Exploit::Remote::SamrComputer
+  include Msf::Exploit::Remote::MsSamr
 
   def initialize(info = {})
     super(
@@ -53,17 +53,17 @@ class MetasploitModule < Msf::Auxiliary
 
   def run
     send("action_#{action.name.downcase}")
-  rescue SamrComputerConnectionError => e
+  rescue MsSamrConnectionError => e
     fail_with(Failure::Unreachable, e.message)
-  rescue SamrComputerAuthentcationError => e
+  rescue MsSamrAuthentcationError => e
     fail_with(Failure::NoAccess, e.message)
-  rescue SamrComputerNotFoundError => e
+  rescue MsSamrNotFoundError => e
     fail_with(Failure::NotFound, e.message)
-  rescue SamrComputerBadConfigError => e
+  rescue MsSamrBadConfigError => e
     fail_with(Failure::BadConfig, e.message)
-  rescue SamrComputerUnexpectedReplyError => e
+  rescue MsSamrUnexpectedReplyError => e
     fail_with(Failure::UnexpectedReply, e.message)
-  rescue SamrComputerUnknownError => e
+  rescue MsSamrUnknownError => e
     fail_with(Failure::Unknown, e.message)
   end
 

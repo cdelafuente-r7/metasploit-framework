@@ -22,7 +22,7 @@ The module will go through the following steps:
 - Select "Active Directory Certificate Services" under the "Server Roles" section
 - When prompted add all of the features and management tools
 - On the AD CS "Role Services" tab, leave the default selection of only "Certificate Authority"
-- Completion the installation and reboot the server
+- Complete the installation and reboot the server
 - Reopen the Server Manager
 - Go to the AD CS tab and where it says "Configuration Required", hit "More" then "Configure Active Directory Certificate..."
 - Select "Certificate Authority" in the Role Services tab

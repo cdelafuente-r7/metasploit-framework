@@ -216,13 +216,15 @@ class MetasploitModule < Msf::Auxiliary
     base = datastore['SMBDomain'].split('.').map { |dc| "dc=#{dc}" }.join(',')
     ldap_options = {
       port: datastore['LDAP_PORT'],
-      base: base,
-      auth: {
-        username: "#{datastore['SMBUser']}@#{datastore['SMBDomain']}",
-        password: datastore['SMBPass'],
-        method: :simple
-      }
+      base: base
     }
+
+    datastore['USERNAME'] = datastore['SMBUser'].dup
+    datastore['PASSWORD'] = datastore['SMBPass'].dup
+    datastore['DOMAIN'] = datastore['SMBDomain'].dup
+    if ['plaintext', 'auto'].include?(datastore['LDAPAuth'])
+      datastore['USERNAME'] << "@#{datastore['SMBDomain']}"
+    end
 
     ldap_connect(ldap_options) do |ldap|
       if ldap.get_operation_result.code != 0

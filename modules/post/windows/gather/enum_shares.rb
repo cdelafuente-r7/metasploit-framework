@@ -4,7 +4,7 @@
 ##
 
 class MetasploitModule < Msf::Post
-  include Msf::Post::Windows::Registry
+  include Msf::Util::WindowsRegistry
   include Msf::Post::Windows::Priv
 
   SID_PREFIX_USER = 'S-1-5-21-'.freeze
@@ -53,20 +53,20 @@ class MetasploitModule < Msf::Post
   # @return [Array] List of recently mounted UNC paths
   def enum_recent_mounts(base_key)
     partial_path = base_key + '\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer'
-    explorer_keys = registry_enumkeys(partial_path).to_s || ''
+    explorer_keys = @win_registry.enum_key(partial_path).to_s || ''
 
     return [] unless explorer_keys.include?('Map Network Drive MRU')
 
     full_path = "#{partial_path}\\Map Network Drive MRU"
-    vals_found = registry_enumvals(full_path)
+    vals_found = @win_registry.enum_values(full_path)
 
     return [] unless vals_found
 
     recent_mounts = []
-    registry_enumvals(full_path).each do |k|
+    vals_found.each do |k|
       next if k.include?('MRUList')
 
-      mounted_path = registry_getvaldata(full_path, k)
+      mounted_path = @win_registry.get_value(full_path, k)
       recent_mounts << mounted_path if mounted_path.starts_with?('\\\\')
     end
 
@@ -78,7 +78,7 @@ class MetasploitModule < Msf::Post
   # @return [Array] List of MRU historical UNC paths
   def enum_run_unc(base_key)
     full_path = base_key + '\\Software\\Microsoft\\Windows\\CurrentVersion\\Explorer\\RunMRU'
-    vals_found = registry_enumvals(full_path)
+    vals_found = @win_registry.enum_values(full_path)
 
     return [] unless vals_found
 
@@ -86,7 +86,7 @@ class MetasploitModule < Msf::Post
     vals_found.each do |k|
       next if k.include?('MRUList')
 
-      run_entry = registry_getvaldata(full_path, k).to_s
+      run_entry = @win_registry.get_value(full_path, k).to_s
       unc_paths << run_entry.gsub(/\\1$/, '') if run_entry.starts_with?('\\\\')
     end
 
@@ -103,7 +103,7 @@ class MetasploitModule < Msf::Post
       'HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\services\\LanmanServer\\Shares',
       'HKEY_LOCAL_MACHINE\\SYSTEM\\CurrentControlSet\\services\\lanmanserver\\Shares'
     ].each do |k|
-      if registry_key_exist?(k)
+      if @win_registry.key_exists?(k)
         shares_key = k
         break
       end
@@ -114,7 +114,7 @@ class MetasploitModule < Msf::Post
       return
     end
 
-    share_names = registry_enumvals(shares_key)
+    share_names = @win_registry.enum_values(shares_key)
 
     if share_names.empty?
       print_status('No network shares were found')
@@ -124,7 +124,7 @@ class MetasploitModule < Msf::Post
     shares = []
     print_status('The following shares were found:')
     share_names.each do |sname|
-      share_info = registry_getvaldata(shares_key, sname)
+      share_info = @win_registry.get_value(shares_key, sname)
       next if share_info.nil?
 
       print_status("\tName: #{sname}")
@@ -168,6 +168,7 @@ class MetasploitModule < Msf::Post
     hostname = sysinfo.nil? ? cmd_exec('hostname') : sysinfo['Computer']
     print_status("Running module against #{hostname} (#{session.session_host})")
 
+    @win_registry = Msf::Util::WindowsRegistry.local_connect(session)
     enum_conf_shares if datastore['CURRENT']
 
     return unless datastore['RECENT'] || datastore['ENTERED']
@@ -179,7 +180,7 @@ class MetasploitModule < Msf::Post
       mount_history = enum_recent_mounts('HKEY_CURRENT_USER') if datastore['RECENT']
       run_history = enum_run_unc('HKEY_CURRENT_USER') if datastore['ENTERED']
     else
-      keys = registry_enumkeys('HKU') || []
+      keys = @win_registry.enum_key('HKU') || []
       keys.each do |maybe_sid|
         next unless maybe_sid.starts_with?(SID_PREFIX_USER)
         next if maybe_sid.include?('_Classes')

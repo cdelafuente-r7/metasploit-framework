@@ -58,7 +58,8 @@ module Msf::Post::Windows::Priv
       end
     end
 
-    local_service_key = registry_enumkeys('HKU\S-1-5-19')
+    win_registry = Msf::Util::WindowsRegistry.local_connect(session)
+    local_service_key = win_registry.enum_key('HKU\S-1-5-19')
 
     !local_service_key.blank?
   end
@@ -128,7 +129,8 @@ module Msf::Post::Windows::Priv
       return session.sys.config.is_system?
     end
 
-    sam = registry_enumkeys('HKLM\SAM\SAM')
+    win_registry = Msf::Util::WindowsRegistry.local_connect(session)
+    sam = win_registry.enum_key('HKLM\SAM\SAM')
 
     !sam.blank?
   end

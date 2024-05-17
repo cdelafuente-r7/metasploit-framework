@@ -1149,7 +1149,7 @@ class MetasploitModule < Msf::Auxiliary
       if @winreg
         if datastore['INLINE']
           print_status('Using `INLINE` technique for SAM')
-          windows_reg = Msf::Util::WindowsRegistry::RemoteRegistry.new(@winreg, name: :sam, inline: true)
+          windows_reg = Msf::Util::WindowsRegistry.remote_connect(@winreg, name: :sam, inline: true)
         else
           begin
             sam = save_sam
@@ -1169,7 +1169,7 @@ class MetasploitModule < Msf::Auxiliary
       if @winreg
         if datastore['INLINE']
           print_status('Using `INLINE` technique for CACHE and LSA')
-          windows_reg = Msf::Util::WindowsRegistry::RemoteRegistry.new(@winreg, name: :security, inline: true)
+          windows_reg = Msf::Util::WindowsRegistry.remote_connect(@winreg, name: :security, inline: true)
         else
           begin
             security = save_security

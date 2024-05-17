@@ -460,6 +460,11 @@ module WindowsRegistry
       end
       res
     end
+
+    def key_exists?(key)
+      !find_key(key).nil?
+    end
+
   end
 
 end

@@ -159,6 +159,10 @@ module WindowsRegistry
       restore_dacl(key, sd_backup) if @inline && sd_backup
     end
 
+    def key_exists?(key)
+      @winreg.has_registry_key?(key, bind: false)
+    end
+
   end
 end
 end

@@ -1,0 +1,10 @@
+Technique ID,Technique Name,MSF Tag Priority,Tactic,Description
+T1003,OS Credential Dumping,High,Credential Access,Adversaries may attempt to dump credentials to obtain account login and credential material
+T1021,Remote Services,High,Lateral Movement,Adversaries may use valid accounts to log into remote machines using services
+T1055,Process Injection,High,Defense Evasion,Adversaries may inject code into processes in order to evade process-based defenses
+T1059,Command and Scripting Interpreter,High,Execution,Adversaries may abuse command and script interpreters to execute commands
+T1078,Valid Accounts,Medium,Defense Evasion,Adversaries may obtain and abuse credentials of existing accounts as a means of gaining Initial Access
+T1110,Brute Force,High,Credential Access,Adversaries may use brute force techniques to gain access to accounts when passwords are unknown
+T1190,Exploit Public-Facing Application,High,Initial Access,Adversaries may attempt to take advantage of a weakness in an Internet-facing computer or program
+T1210,Exploitation of Remote Services,High,Lateral Movement,Adversaries may exploit remote services to gain unauthorized access to internal systems
+T1574,Hijack Execution Flow,Medium,Privilege Escalation,Adversaries may execute their own malicious payloads by hijacking the way operating systems run programs

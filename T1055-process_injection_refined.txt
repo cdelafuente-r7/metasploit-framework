@@ -1,0 +1,1992 @@
+MITRE ATT&CK Technique: T1055 - Process Injection
+Tactic: Defense Evasion
+Description: Adversaries may inject code into processes in order to evade process-based defenses
+
+Total related modules found: 397
+================================================================================
+
+Module: payloads/stages/windows/patchupmeterpreter.rb
+Documentation: No documentation found
+Analysis: Score: 8 - MED: 'inject' in name/description; HIGH: 'dll injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: payloads/stages/windows/meterpreter.rb
+Documentation: No documentation found
+Analysis: Score: 8 - MED: 'inject' in name/description; HIGH: 'dll injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: payloads/stages/windows/x64/meterpreter.rb
+Documentation: No documentation found
+Analysis: Score: 8 - MED: 'inject' in name/description; HIGH: 'dll injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/http/spip_connect_exec.rb
+Documentation: documentation/modules/exploit/multi/http/spip_connect_exec.md
+Analysis: Score: 8 - MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/spip_rce_form.rb
+Documentation: documentation/modules/exploit/multi/http/spip_rce_form.md
+Analysis: Score: 8 - MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/ivanti_csa_unauth_rce_cve_2021_44529.rb
+Documentation: documentation/modules/exploit/linux/http/ivanti_csa_unauth_rce_cve_2021_44529.md
+Analysis: Score: 8 - MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source and documentation)
+----------------------------------------
+
+Module: post/windows/gather/memory_grep.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'memory' in name/description; PATH: 'memory' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/adobe_flash_domain_memory_uaf.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'memory' in name/description; PATH: 'memory' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/ms09_002_memory_corruption.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'memory' in name/description; PATH: 'memory' in module path (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/server/openssl_heartbeat_client_memory.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'memory' in name/description; PATH: 'memory' in module path (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/admin/vxworks/wdbrpc_memory_dump.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'memory' in name/description; PATH: 'memory' in module path (analyzed module source only)
+----------------------------------------
+
+Module: post/windows/gather/memory_dump.rb
+Documentation: documentation/modules/post/windows/gather/memory_dump.md
+Analysis: Score: 7 - MED: 'memory' in name/description; PATH: 'memory' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: post/windows/gather/avast_memory_dump.rb
+Documentation: documentation/modules/post/windows/gather/avast_memory_dump.md
+Analysis: Score: 7 - MED: 'memory' in name/description; PATH: 'memory' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: post/windows/manage/dell_memory_protect.rb
+Documentation: documentation/modules/post/windows/manage/dell_memory_protect.md
+Analysis: Score: 7 - MED: 'memory' in name/description; PATH: 'memory' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: post/multi/gather/memory_search.rb
+Documentation: documentation/modules/post/multi/gather/memory_search.md
+Analysis: Score: 7 - MED: 'memory' in name/description; PATH: 'memory' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: auxiliary/scanner/http/elasticsearch_memory_disclosure.rb
+Documentation: documentation/modules/auxiliary/scanner/http/elasticsearch_memory_disclosure.md
+Analysis: Score: 7 - MED: 'memory' in name/description; PATH: 'memory' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: auxiliary/scanner/http/ms15_034_http_sys_memory_dump.rb
+Documentation: documentation/modules/auxiliary/scanner/http/ms15_034_http_sys_memory_dump.md
+Analysis: Score: 7 - MED: 'memory' in name/description; PATH: 'memory' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: post/windows/gather/word_unc_injector.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: post/windows/manage/inject_host.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: post/windows/manage/inject_ca.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/notes_handler_cmdinject.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/java_ws_arginject_altjvm.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/browser/firefox_webidl_injection.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/browser/firefox_tostring_console_injection.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/http/php_cgi_arg_injection.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/http/apache_roller_ognl_injection.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/fileformat/peazip_command_injection.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/fileformat/js_unpacker_eval_injection.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/tr064_ntpserver_cmdinject.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/goautodial_3_rce_command_injection.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/tp_link_sc2020n_authenticated_telnet_injection.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/scanner/postgres/postgres_dbname_flag_injection.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/scanner/http/error_sql_injection.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/scanner/http/adobe_xml_inject.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/scanner/http/host_header_injection.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/gather/mongodb_js_inject_collection_enum.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/gather/ie_uxss_injection.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/fileformat/word_unc_injector.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: payloads/stages/windows/peinject.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: payloads/stages/windows/x64/peinject.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: post/windows/manage/peinjector.rb
+Documentation: documentation/modules/post/windows/manage/peinjector.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/windows/http/php_cgi_arg_injection_rce_cve_2024_4577.rb
+Documentation: documentation/modules/exploit/windows/http/php_cgi_arg_injection_rce_cve_2024_4577.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/windows/http/manageengine_admanager_plus_cve_2023_29084_auth_cmd_injection.rb
+Documentation: documentation/modules/exploit/windows/http/manageengine_admanager_plus_cve_2023_29084_auth_cmd_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/windows/http/advantech_iview_networkservlet_cmd_inject.rb
+Documentation: documentation/modules/exploit/windows/http/advantech_iview_networkservlet_cmd_inject.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/unix/webapp/ajenti_auth_username_cmd_injection.rb
+Documentation: documentation/modules/exploit/unix/webapp/ajenti_auth_username_cmd_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/unix/webapp/opennetadmin_ping_cmd_injection.rb
+Documentation: documentation/modules/exploit/unix/webapp/opennetadmin_ping_cmd_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/unix/webapp/elfinder_php_connector_exiftran_cmd_injection.rb
+Documentation: documentation/modules/exploit/unix/webapp/elfinder_php_connector_exiftran_cmd_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/unix/dhcp/rhel_dhcp_client_command_injection.rb
+Documentation: documentation/modules/exploit/unix/dhcp/rhel_dhcp_client_command_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/unix/fileformat/exiftool_djvu_ant_perl_injection.rb
+Documentation: documentation/modules/exploit/unix/fileformat/exiftool_djvu_ant_perl_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/unix/fileformat/metasploit_msfvenom_apk_template_cmd_injection.rb
+Documentation: documentation/modules/exploit/unix/fileformat/metasploit_msfvenom_apk_template_cmd_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/osx/local/timemachine_cmd_injection.rb
+Documentation: documentation/modules/exploit/osx/local/timemachine_cmd_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/atlassian_confluence_webwork_ognl_injection.rb
+Documentation: documentation/modules/exploit/multi/http/atlassian_confluence_webwork_ognl_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/cmsms_object_injection_rce.rb
+Documentation: documentation/modules/exploit/multi/http/cmsms_object_injection_rce.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/atlassian_confluence_namespace_ognl_injection.rb
+Documentation: documentation/modules/exploit/multi/http/atlassian_confluence_namespace_ognl_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/log4shell_header_injection.rb
+Documentation: documentation/modules/exploit/multi/http/log4shell_header_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/gitlist_arg_injection.rb
+Documentation: documentation/modules/exploit/multi/http/gitlist_arg_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/spring_cloud_function_spel_injection.rb
+Documentation: documentation/modules/exploit/multi/http/spring_cloud_function_spel_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/phpmailer_arg_injection.rb
+Documentation: documentation/modules/exploit/multi/http/phpmailer_arg_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/fileformat/evince_cbt_cmd_injection.rb
+Documentation: documentation/modules/exploit/multi/fileformat/evince_cbt_cmd_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/fileformat/swagger_param_inject.rb
+Documentation: documentation/modules/exploit/multi/fileformat/swagger_param_inject.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/misc/igel_command_injection.rb
+Documentation: documentation/modules/exploit/linux/misc/igel_command_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/elfinder_archive_cmd_injection.rb
+Documentation: documentation/modules/exploit/linux/http/elfinder_archive_cmd_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/glpi_htmlawed_php_injection.rb
+Documentation: documentation/modules/exploit/linux/http/glpi_htmlawed_php_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/opentsdb_yrange_cmd_injection.rb
+Documentation: documentation/modules/exploit/linux/http/opentsdb_yrange_cmd_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/vinchin_backup_recovery_cmd_inject.rb
+Documentation: documentation/modules/exploit/linux/http/vinchin_backup_recovery_cmd_inject.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/librenms_addhost_cmd_inject.rb
+Documentation: documentation/modules/exploit/linux/http/librenms_addhost_cmd_inject.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/dlink_dwl_2600_command_injection.rb
+Documentation: documentation/modules/exploit/linux/http/dlink_dwl_2600_command_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/progress_kemp_loadmaster_unauth_cmd_injection.rb
+Documentation: documentation/modules/exploit/linux/http/progress_kemp_loadmaster_unauth_cmd_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/artica_proxy_auth_bypass_service_cmds_peform_command_injection.rb
+Documentation: documentation/modules/exploit/linux/http/artica_proxy_auth_bypass_service_cmds_peform_command_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/hp_van_sdn_cmd_inject.rb
+Documentation: documentation/modules/exploit/linux/http/hp_van_sdn_cmd_inject.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/librenms_collectd_cmd_inject.rb
+Documentation: documentation/modules/exploit/linux/http/librenms_collectd_cmd_inject.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/tp_link_ncxxx_bonjour_command_injection.rb
+Documentation: documentation/modules/exploit/linux/http/tp_link_ncxxx_bonjour_command_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/majordomo_cmd_inject_cve_2023_50917.rb
+Documentation: documentation/modules/exploit/linux/http/majordomo_cmd_inject_cve_2023_50917.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/wepresent_cmd_injection.rb
+Documentation: documentation/modules/exploit/linux/http/wepresent_cmd_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/microfocus_obr_cmd_injection.rb
+Documentation: documentation/modules/exploit/linux/http/microfocus_obr_cmd_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/cacti_unauthenticated_cmd_injection.rb
+Documentation: documentation/modules/exploit/linux/http/cacti_unauthenticated_cmd_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/wipg1000_cmd_injection.rb
+Documentation: documentation/modules/exploit/linux/http/wipg1000_cmd_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/nexus_repo_manager_el_injection.rb
+Documentation: documentation/modules/exploit/linux/http/nexus_repo_manager_el_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/wd_mycloud_unauthenticated_cmd_injection.rb
+Documentation: documentation/modules/exploit/linux/http/wd_mycloud_unauthenticated_cmd_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/klog_server_authenticate_user_unauth_command_injection.rb
+Documentation: documentation/modules/exploit/linux/http/klog_server_authenticate_user_unauth_command_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/bitbucket_git_cmd_injection.rb
+Documentation: documentation/modules/exploit/linux/http/bitbucket_git_cmd_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/ray_cpu_profile_cmd_injection_cve_2023_6019.rb
+Documentation: documentation/modules/exploit/linux/http/ray_cpu_profile_cmd_injection_cve_2023_6019.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/pineapple_preconfig_cmdinject.rb
+Documentation: documentation/modules/exploit/linux/http/pineapple_preconfig_cmdinject.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/pineapple_bypass_cmdinject.rb
+Documentation: documentation/modules/exploit/linux/http/pineapple_bypass_cmdinject.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/sophos_utm_webadmin_sid_cmd_injection.rb
+Documentation: documentation/modules/exploit/linux/http/sophos_utm_webadmin_sid_cmd_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/opentsdb_key_cmd_injection.rb
+Documentation: documentation/modules/exploit/linux/http/opentsdb_key_cmd_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/progress_flowmon_unauth_cmd_injection.rb
+Documentation: documentation/modules/exploit/linux/http/progress_flowmon_unauth_cmd_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/huawei_hg532n_cmdinject.rb
+Documentation: documentation/modules/exploit/linux/http/huawei_hg532n_cmdinject.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: auxiliary/scanner/http/wordpress_content_injection.rb
+Documentation: documentation/modules/auxiliary/scanner/http/wordpress_content_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: auxiliary/admin/http/wp_symposium_sql_injection.rb
+Documentation: documentation/modules/auxiliary/admin/http/wp_symposium_sql_injection.md
+Analysis: Score: 7 - MED: 'inject' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/windows/browser/juniper_sslvpn_ive_setupdll.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'dll' in name/description; PATH: 'dll' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/webdav_dll_hijacker.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'dll' in name/description; PATH: 'dll' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/misc/vmhgfs_webdav_dll_sideload.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'dll' in name/description; PATH: 'dll' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/http/amlibweb_webquerydll_app.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'dll' in name/description; PATH: 'dll' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/fileformat/office_ole_multiple_dll_hijack.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'dll' in name/description; PATH: 'dll' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/local/srclient_dll_hijacking.rb
+Documentation: documentation/modules/exploit/windows/local/srclient_dll_hijacking.md
+Analysis: Score: 7 - MED: 'dll' in name/description; PATH: 'dll' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/windows/local/dnsadmin_serverlevelplugindll.rb
+Documentation: documentation/modules/exploit/windows/local/dnsadmin_serverlevelplugindll.md
+Analysis: Score: 7 - MED: 'dll' in name/description; PATH: 'dll' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/windows/iis/ms03_007_ntdll_webdav.rb
+Documentation: documentation/modules/exploit/windows/iis/ms03_007_ntdll_webdav.md
+Analysis: Score: 7 - MED: 'dll' in name/description; PATH: 'dll' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/firefox/local/exec_shellcode.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'shellcode' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: payloads/stages/windows/custom.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'shellcode' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: payloads/stages/windows/x64/custom.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'shellcode' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: payloads/singles/osx/x64/say.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'shellcode' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/wins/ms04_045_wins.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/ms10_002_ie_object.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/ms09_072_style_object.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/ms09_043_owc_msdso.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/ms10_018_ie_tabular_activex.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/autodesk_idrop.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/ms10_090_ie_css_clip.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/adobe_shockwave_rcsl_corruption.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/mozilla_interleaved_write.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/ms16_051_vbscript.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/msxml_get_definition_code_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/ms12_037_same_id.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/adobe_flashplayer_flash10o.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/ms13_022_silverlight_script_object.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/ms08_078_xml_corruption.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/adobe_flash_uncompress_zlib_uninitialized.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/ftp/vermillion_ftpd_port.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/mssql/ms09_004_sp_replwritetovarbin.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/fileformat/vlc_webm.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/fileformat/adobe_jbig2decode.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/browser/firefox_escape_retval.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/browser/adobe_flash_shader_drawing_fill.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/browser/qtjava_pointer.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/samba/chain_reply.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/dos/smtp/sendmail_prescan.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/dos/http/rails_action_view.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/dos/http/gzip_bomb_dos.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/fileformat/adobe_reader_u3d.rb
+Documentation: documentation/modules/exploit/windows/fileformat/adobe_reader_u3d.md
+Analysis: Score: 5 - MED: 'memory' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/windows/browser/java_ws_double_quote.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/java_ws_vmargs.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/mssql/mssql_payload_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/emc/alphastor_device_manager_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/scada/igss_exec_17.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/misc/altiris_ds_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/http/cyclope_ess_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/http/solarwinds_storage_manager_sql.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/http/cogent_datahub_command.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/http/ca_totaldefense_regeneratereports.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/http/sap_host_control_cmd_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/http/osb_uname_jlist.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/http/sonicwall_scrutinizer_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/http/hp_sitescope_dns_tool.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/unix/webapp/mitel_awc_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/unix/webapp/vicidial_manager_send_cmd_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/unix/webapp/vbulletin_vote_sqli_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/unix/webapp/nagios_graph_explorer.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/unix/webapp/oracle_vm_agent_utl.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/unix/webapp/tuleap_rest_unserialize_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/unix/webapp/hastymail_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/unix/misc/zabbix_agent_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/unix/dhcp/bash_environment.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/unix/http/lifesize_room.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/browser/firefox_proxy_prototype.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/browser/firefox_pdfjs_privilege_escalation.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/misc/persistent_hpca_radexec_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/http/hp_sys_mgmt_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/http/jira_hipchat_template.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/http/dexter_casinoloader_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/http/atutor_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/http/wikka_spam_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/http/manage_engine_dc_pmp_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/http/manageengine_search_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/smtp/exim4_dovecot_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/antivirus/escan_password_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/ids/alienvault_centerd_soap_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/zabbix_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/symantec_web_gateway_restore.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/esva_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/symantec_web_gateway_pbcontrol.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/dlink_dir615_up_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/efw_chpasswd_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/groundwork_monarch_cmd_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/trueonline_billion_5200w_rce.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/fritzbox_echo_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/linksys_e1500_apply_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/centreon_sqli_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/dolibarr_cmd_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/kloxo_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/symantec_web_gateway_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/trueonline_p660hn_v1_rce.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/linksys_wrt110_cmd_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/multi_ncc_ping_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/linksys_wrt160nv2_apply_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/trueonline_p660hn_v2_rce.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/alienvault_sqli_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/linksys_themoon_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/sqli/oracle/dbms_export_extension.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/sqli/oracle/lt_rollbackworkspace.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/sqli/oracle/lt_mergeworkspace.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/sqli/oracle/lt_compressworkspace.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/sqli/oracle/dbms_metadata_get_xml.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/sqli/oracle/droptable_trigger.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/sqli/oracle/dbms_cdc_subscribe_activate_subscription.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/sqli/oracle/dbms_cdc_publish.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/sqli/oracle/dbms_metadata_get_granted_xml.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/sqli/oracle/dbms_cdc_ipublish.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/sqli/oracle/lt_removeworkspace.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/sqli/oracle/lt_findricset_cursor.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/sqli/oracle/dbms_cdc_publish2.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/sqli/oracle/dbms_cdc_publish3.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/sqli/oracle/dbms_metadata_open.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/scanner/ssl/openssl_ccs.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/scanner/sap/sap_soap_rfc_dbmcli_sxpg_call_system_command_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/scanner/sap/sap_soap_rfc_dbmcli_sxpg_command_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/scanner/http/joomla_gallerywd_sqli_scanner.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/scanner/http/joomla_ecommercewd_sqli_scanner.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/scanner/http/wp_contus_video_gallery_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/scanner/http/wordpress_cp_calendar_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/scanner/http/blind_sql_query.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/scanner/http/lucky_punch.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/scanner/http/xpath.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/gather/joomla_com_realestatemanager_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/gather/dolibarr_creds_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/gather/mantisbt_admin_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/gather/drupal_openid_xxe.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/gather/vbulletin_vote_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/gather/joomla_weblinks_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/gather/joomla_contenthistory_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/gather/alienvault_newpolicyform_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/gather/zabbix_toggleids_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/gather/alienvault_iso27001_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/admin/dns/dyn_dns_update.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/admin/oracle/osb_execqr3.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/admin/oracle/osb_execqr.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/admin/oracle/osb_execqr2.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/admin/maxdb/maxdb_cons_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/admin/http/cfme_manageiq_evm_pass_reset.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/admin/http/manageengine_pmp_privesc.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/scada/mypro_cmdexe.rb
+Documentation: documentation/modules/exploit/windows/scada/mypro_cmdexe.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/windows/scada/diaenergie_sqli.rb
+Documentation: documentation/modules/exploit/windows/scada/diaenergie_sqli.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/windows/scada/mypro_mgr_cmd.rb
+Documentation: documentation/modules/exploit/windows/scada/mypro_mgr_cmd.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/windows/misc/commvault_cmd_exec.rb
+Documentation: documentation/modules/exploit/windows/misc/commvault_cmd_exec.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/windows/misc/ais_esel_server_rce.rb
+Documentation: documentation/modules/exploit/windows/misc/ais_esel_server_rce.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/windows/http/lg_simple_editor_rce_uploadvideo.rb
+Documentation: documentation/modules/exploit/windows/http/lg_simple_editor_rce_uploadvideo.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/windows/http/apache_tika_jp2_jscript.rb
+Documentation: documentation/modules/exploit/windows/http/apache_tika_jp2_jscript.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/windows/http/sharepoint_workflows_xoml.rb
+Documentation: documentation/modules/exploit/windows/http/sharepoint_workflows_xoml.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/windows/http/moveit_cve_2023_34362.rb
+Documentation: documentation/modules/exploit/windows/http/moveit_cve_2023_34362.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/unix/smtp/qmail_bash_env_exec.rb
+Documentation: documentation/modules/exploit/unix/smtp/qmail_bash_env_exec.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/unix/webapp/zoneminder_snapshots.rb
+Documentation: documentation/modules/exploit/unix/webapp/zoneminder_snapshots.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/unix/webapp/wp_phpmailer_host_header.rb
+Documentation: documentation/modules/exploit/unix/webapp/wp_phpmailer_host_header.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/unix/webapp/drupal_drupalgeddon2.rb
+Documentation: documentation/modules/exploit/unix/webapp/drupal_drupalgeddon2.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/unix/webapp/thinkphp_rce.rb
+Documentation: documentation/modules/exploit/unix/webapp/thinkphp_rce.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/unix/webapp/byob_unauth_rce.rb
+Documentation: documentation/modules/exploit/unix/webapp/byob_unauth_rce.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/unix/x11/x11_keyboard_exec.rb
+Documentation: documentation/modules/exploit/unix/x11/x11_keyboard_exec.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/unix/http/quest_kace_systems_management_rce.rb
+Documentation: documentation/modules/exploit/unix/http/quest_kace_systems_management_rce.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/unix/http/pfsense_config_data_exec.rb
+Documentation: documentation/modules/exploit/unix/http/pfsense_config_data_exec.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/unix/http/raspap_rce.rb
+Documentation: documentation/modules/exploit/unix/http/raspap_rce.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/unix/http/maltrail_rce.rb
+Documentation: documentation/modules/exploit/unix/http/maltrail_rce.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/misc/nodejs_v8_debugger.rb
+Documentation: documentation/modules/exploit/multi/misc/nodejs_v8_debugger.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/struts2_content_type_ognl.rb
+Documentation: documentation/modules/exploit/multi/http/struts2_content_type_ognl.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/makoserver_cmd_exec.rb
+Documentation: documentation/modules/exploit/multi/http/makoserver_cmd_exec.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/vbulletin_getindexablecontent.rb
+Documentation: documentation/modules/exploit/multi/http/vbulletin_getindexablecontent.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/gitlab_exif_rce.rb
+Documentation: documentation/modules/exploit/multi/http/gitlab_exif_rce.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/vmware_vcenter_log4shell.rb
+Documentation: documentation/modules/exploit/multi/http/vmware_vcenter_log4shell.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/confluence_widget_connector.rb
+Documentation: documentation/modules/exploit/multi/http/confluence_widget_connector.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/cve_2023_38836_boidcms.rb
+Documentation: documentation/modules/exploit/multi/http/cve_2023_38836_boidcms.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/atlassian_confluence_rce_cve_2023_22527.rb
+Documentation: documentation/modules/exploit/multi/http/atlassian_confluence_rce_cve_2023_22527.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/pentaho_business_server_authbypass_and_ssti.rb
+Documentation: documentation/modules/exploit/multi/http/pentaho_business_server_authbypass_and_ssti.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/ubiquiti_unifi_log4shell.rb
+Documentation: documentation/modules/exploit/multi/http/ubiquiti_unifi_log4shell.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/apache_druid_cve_2023_25194.rb
+Documentation: documentation/modules/exploit/multi/http/apache_druid_cve_2023_25194.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/struts2_namespace_ognl.rb
+Documentation: documentation/modules/exploit/multi/http/struts2_namespace_ognl.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/mediawiki_syntaxhighlight.rb
+Documentation: documentation/modules/exploit/multi/http/mediawiki_syntaxhighlight.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/drupal_drupageddon.rb
+Documentation: documentation/modules/exploit/multi/http/drupal_drupageddon.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/sonicwall_scrutinizer_methoddetail_sqli.rb
+Documentation: documentation/modules/exploit/multi/http/sonicwall_scrutinizer_methoddetail_sqli.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/snmp/awind_snmp_exec.rb
+Documentation: documentation/modules/exploit/linux/snmp/awind_snmp_exec.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/netgear_dnslookup_cmd_exec.rb
+Documentation: documentation/modules/exploit/linux/http/netgear_dnslookup_cmd_exec.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/optergy_bms_backdoor_rce_cve_2019_7276.rb
+Documentation: documentation/modules/exploit/linux/http/optergy_bms_backdoor_rce_cve_2019_7276.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/imperva_securesphere_exec.rb
+Documentation: documentation/modules/exploit/linux/http/imperva_securesphere_exec.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/roxy_wi_exec.rb
+Documentation: documentation/modules/exploit/linux/http/roxy_wi_exec.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/mobileiron_core_log4shell.rb
+Documentation: documentation/modules/exploit/linux/http/mobileiron_core_log4shell.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/dlink_dsl2750b_exec_noauth.rb
+Documentation: documentation/modules/exploit/linux/http/dlink_dsl2750b_exec_noauth.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/apache_spark_rce_cve_2022_33891.rb
+Documentation: documentation/modules/exploit/linux/http/apache_spark_rce_cve_2022_33891.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/craftcms_ftp_template.rb
+Documentation: documentation/modules/exploit/linux/http/craftcms_ftp_template.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/pandora_itsm_auth_rce_cve_2025_4653.rb
+Documentation: documentation/modules/exploit/linux/http/pandora_itsm_auth_rce_cve_2025_4653.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/netgear_r7000_cgibin_exec.rb
+Documentation: documentation/modules/exploit/linux/http/netgear_r7000_cgibin_exec.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/zyxel_parse_config_rce.rb
+Documentation: documentation/modules/exploit/linux/http/zyxel_parse_config_rce.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/cisco_rv_series_authbypass_and_rce.rb
+Documentation: documentation/modules/exploit/linux/http/cisco_rv_series_authbypass_and_rce.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/cisco_asax_sfr_rce.rb
+Documentation: documentation/modules/exploit/linux/http/cisco_asax_sfr_rce.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/xorcom_completepbx_scheduler.rb
+Documentation: documentation/modules/exploit/linux/http/xorcom_completepbx_scheduler.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/ivanti_connect_secure_rce_cve_2024_37404.rb
+Documentation: documentation/modules/exploit/linux/http/ivanti_connect_secure_rce_cve_2024_37404.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/sonicwall_cve_2021_20039.rb
+Documentation: documentation/modules/exploit/linux/http/sonicwall_cve_2021_20039.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/ipfire_bashbug_exec.rb
+Documentation: documentation/modules/exploit/linux/http/ipfire_bashbug_exec.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/openmetadata_auth_bypass_rce.rb
+Documentation: documentation/modules/exploit/linux/http/openmetadata_auth_bypass_rce.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/logsign_exec.rb
+Documentation: documentation/modules/exploit/linux/http/logsign_exec.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/chamilo_unauth_rce_cve_2023_34960.rb
+Documentation: documentation/modules/exploit/linux/http/chamilo_unauth_rce_cve_2023_34960.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/pandora_fms_auth_rce_cve_2024_12971.rb
+Documentation: documentation/modules/exploit/linux/http/pandora_fms_auth_rce_cve_2024_12971.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/zyxel_ztp_rce.rb
+Documentation: documentation/modules/exploit/linux/http/zyxel_ztp_rce.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/mida_solutions_eframework_ajaxreq_rce.rb
+Documentation: documentation/modules/exploit/linux/http/mida_solutions_eframework_ajaxreq_rce.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/pandora_fms_auth_rce_cve_2024_11320.rb
+Documentation: documentation/modules/exploit/linux/http/pandora_fms_auth_rce_cve_2024_11320.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/linear_emerge_unauth_rce_cve_2019_7256.rb
+Documentation: documentation/modules/exploit/linux/http/linear_emerge_unauth_rce_cve_2019_7256.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/cisco_rv340_lan.rb
+Documentation: documentation/modules/exploit/linux/http/cisco_rv340_lan.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/hikvision_cve_2021_36260_blind.rb
+Documentation: documentation/modules/exploit/linux/http/hikvision_cve_2021_36260_blind.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: auxiliary/sqli/dlink/dlink_central_wifimanager_sqli.rb
+Documentation: documentation/modules/auxiliary/sqli/dlink/dlink_central_wifimanager_sqli.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: auxiliary/scanner/telnet/satel_cmd_exec.rb
+Documentation: documentation/modules/auxiliary/scanner/telnet/satel_cmd_exec.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: auxiliary/scanner/http/vicidial_sql_enum_users_pass.rb
+Documentation: documentation/modules/auxiliary/scanner/http/vicidial_sql_enum_users_pass.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: auxiliary/scanner/http/wp_ultimate_member_sorting_sqli.rb
+Documentation: documentation/modules/auxiliary/scanner/http/wp_ultimate_member_sorting_sqli.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: auxiliary/scanner/http/apache_mod_cgi_bash_env.rb
+Documentation: documentation/modules/auxiliary/scanner/http/apache_mod_cgi_bash_env.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: auxiliary/scanner/http/wp_ti_woocommerce_wishlist_sqli.rb
+Documentation: documentation/modules/auxiliary/scanner/http/wp_ti_woocommerce_wishlist_sqli.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: auxiliary/gather/wp_photo_gallery_sqli.rb
+Documentation: documentation/modules/auxiliary/gather/wp_photo_gallery_sqli.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: auxiliary/gather/piwigo_cve_2023_26876.rb
+Documentation: documentation/modules/auxiliary/gather/piwigo_cve_2023_26876.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: auxiliary/gather/pimcore_creds_sqli.rb
+Documentation: documentation/modules/auxiliary/gather/pimcore_creds_sqli.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: auxiliary/gather/vbulletin_getindexablecontent_sqli.rb
+Documentation: documentation/modules/auxiliary/gather/vbulletin_getindexablecontent_sqli.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: auxiliary/gather/jasmin_ransomware_sqli.rb
+Documentation: documentation/modules/auxiliary/gather/jasmin_ransomware_sqli.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: auxiliary/gather/suite_crm_export_sqli.rb
+Documentation: documentation/modules/auxiliary/gather/suite_crm_export_sqli.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: auxiliary/gather/wp_depicter_sqli_cve_2025_2011.rb
+Documentation: documentation/modules/auxiliary/gather/wp_depicter_sqli_cve_2025_2011.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: auxiliary/gather/grandstream_ucm62xx_sql_account_guess.rb
+Documentation: documentation/modules/auxiliary/gather/grandstream_ucm62xx_sql_account_guess.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: auxiliary/admin/http/wp_google_maps_sqli.rb
+Documentation: documentation/modules/auxiliary/admin/http/wp_google_maps_sqli.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: auxiliary/admin/http/whatsup_gold_sqli.rb
+Documentation: documentation/modules/auxiliary/admin/http/whatsup_gold_sqli.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: auxiliary/admin/http/fortra_filecatalyst_workflow_sqli.rb
+Documentation: documentation/modules/auxiliary/admin/http/fortra_filecatalyst_workflow_sqli.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: auxiliary/admin/http/typo3_news_module_sqli.rb
+Documentation: documentation/modules/auxiliary/admin/http/typo3_news_module_sqli.md
+Analysis: Score: 5 - MED: 'inject' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/windows/browser/ms08_053_mediaencoder.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/asus_net4switch_ipswcom.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/novell_groupwise_gwcls1_actvx.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/baofeng_storm_onbeforevideodownload.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/windvd7_applicationtype.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/aventail_epi_activex.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/zenworks_helplauncher_exec.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/realplayer_import.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/yahoomessenger_fvcom.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/winamp_ultravox.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/tumbleweed_filetransfer.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/ask_shortformat.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/oracle_webcenter_checkoutandopen.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/barcode_ax49.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/realplayer_console.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/browser/webex_ucf_newobject.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/local/ikeext_service.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/firewall/blackice_pam_icq.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/smb/ms06_066_nwapi.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/smb/ms06_066_nwwks.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/isapi/ms03_022_nsiislog_post.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/isapi/w3who_query.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/isapi/ms03_051_fp30reg_chunked.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/iis/msadc.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/http/hp_nnm_ovbuildpath_textfile.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/http/badblue_ext_overflow.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/fileformat/visio_dxf_bof.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/fileformat/djvu_imageurl.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/fileformat/msworks_wkspictureinterface.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/dos/windows/llmnr/ms11_030_dnsapi.rb
+Documentation: No documentation found
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/misc/webdav_delivery.rb
+Documentation: documentation/modules/exploit/windows/misc/webdav_delivery.md
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/windows/backdoor/energizer_duo_payload.rb
+Documentation: documentation/modules/exploit/windows/backdoor/energizer_duo_payload.md
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/windows/iis/ms02_065_msadc.rb
+Documentation: documentation/modules/exploit/windows/iis/ms02_065_msadc.md
+Analysis: Score: 5 - MED: 'dll' in name/description (analyzed module source and documentation)
+----------------------------------------
+
+Module: post/windows/manage/shellcode_inject.rb
+Documentation: No documentation found
+Analysis: Score: 43 - HIGH: 'shellcode injection' in name/description; HIGH: 'code injection' in name/description; MED: 'inject' in name/description; MED: 'shellcode' in name/description; MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/local/bypassuac_injection.rb
+Documentation: No documentation found
+Analysis: Score: 31 - HIGH: 'memory injection' in name/description; MED: 'inject' in name/description; MED: 'memory' in name/description; HIGH: 'process injection' in content; HIGH: 'dll injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/local/bypassuac_injection_winsxs.rb
+Documentation: documentation/modules/exploit/windows/local/bypassuac_injection_winsxs.md
+Analysis: Score: 31 - HIGH: 'memory injection' in name/description; MED: 'inject' in name/description; MED: 'memory' in name/description; HIGH: 'process injection' in content; HIGH: 'dll injection' in content (analyzed module source and documentation)
+----------------------------------------
+
+Module: post/windows/manage/reflective_dll_inject.rb
+Documentation: No documentation found
+Analysis: Score: 27 - HIGH: 'dll injection' in name/description; MED: 'inject' in name/description; MED: 'dll' in name/description; HIGH: 'dll injection' in content; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/smb/generic_smb_dll_injection.rb
+Documentation: No documentation found
+Analysis: Score: 27 - HIGH: 'dll injection' in name/description; MED: 'inject' in name/description; MED: 'dll' in name/description; HIGH: 'dll injection' in content; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/misc/ibm_director_cim_dllinject.rb
+Documentation: No documentation found
+Analysis: Score: 27 - HIGH: 'dll injection' in name/description; MED: 'inject' in name/description; MED: 'dll' in name/description; HIGH: 'dll injection' in content; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/http/generic_http_dll_injection.rb
+Documentation: No documentation found
+Analysis: Score: 27 - HIGH: 'dll injection' in name/description; MED: 'inject' in name/description; MED: 'dll' in name/description; HIGH: 'dll injection' in content; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/misc/nvidia_mental_ray.rb
+Documentation: No documentation found
+Analysis: Score: 23 - HIGH: 'dll injection' in name/description; MED: 'inject' in name/description; MED: 'dll' in name/description; HIGH: 'dll injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/dcerpc/cve_2021_1675_printnightmare.rb
+Documentation: documentation/modules/exploit/windows/dcerpc/cve_2021_1675_printnightmare.md
+Analysis: Score: 23 - HIGH: 'dll injection' in name/description; MED: 'inject' in name/description; MED: 'dll' in name/description; HIGH: 'dll injection' in content (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/php/wp_duplicator_code_inject.rb
+Documentation: documentation/modules/exploit/multi/php/wp_duplicator_code_inject.md
+Analysis: Score: 20 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/ispconfig_lang_edit_php_code_injection.rb
+Documentation: documentation/modules/exploit/linux/http/ispconfig_lang_edit_php_code_injection.md
+Analysis: Score: 20 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/unix/webapp/datalife_preview_exec.rb
+Documentation: No documentation found
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: exploits/unix/webapp/phpmyadmin_config.rb
+Documentation: No documentation found
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: exploits/osx/local/vmware_bash_function_root.rb
+Documentation: No documentation found
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/browser/firefox_svg_plugin.rb
+Documentation: No documentation found
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/ftp/pureftpd_bash_env_exec.rb
+Documentation: No documentation found
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/http/phptax_exec.rb
+Documentation: No documentation found
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/http/log1cms_ajax_create_folder.rb
+Documentation: No documentation found
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/http/vbseo_proc_deutf.rb
+Documentation: No documentation found
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/http/phpldapadmin_query_engine.rb
+Documentation: No documentation found
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/http/cups_bash_env_exec.rb
+Documentation: No documentation found
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/http/mantisbt_php_exec.rb
+Documentation: No documentation found
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/http/apache_mod_cgi_bash_env_exec.rb
+Documentation: No documentation found
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/http/eaton_nsm_code_exec.rb
+Documentation: No documentation found
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/http/phpscheduleit_start_date.rb
+Documentation: No documentation found
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/http/pmwiki_pagelist.rb
+Documentation: No documentation found
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/webcalendar_settings_exec.rb
+Documentation: No documentation found
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/webid_converter.rb
+Documentation: No documentation found
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/advantech_switch_bash_env_exec.rb
+Documentation: No documentation found
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/foreman_openstack_satellite_code_exec.rb
+Documentation: No documentation found
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: exploits/linux/http/trendmicro_sps_exec.rb
+Documentation: No documentation found
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/server/dhclient_bash_env.rb
+Documentation: No documentation found
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source only)
+----------------------------------------
+
+Module: exploits/unix/webapp/openmediavault_rpc_rce.rb
+Documentation: documentation/modules/exploit/unix/webapp/openmediavault_rpc_rce.md
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/misc/calibre_exec.rb
+Documentation: documentation/modules/exploit/multi/misc/calibre_exec.md
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/totaljs_cms_widget_exec.rb
+Documentation: documentation/modules/exploit/multi/http/totaljs_cms_widget_exec.md
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/multi/http/mybb_rce_cve_2022_24734.rb
+Documentation: documentation/modules/exploit/multi/http/mybb_rce_cve_2022_24734.md
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/http/netsweeper_webadmin_unixlogin.rb
+Documentation: documentation/modules/exploit/linux/http/netsweeper_webadmin_unixlogin.md
+Analysis: Score: 18 - HIGH: 'code injection' in name/description; MED: 'inject' in name/description; HIGH: 'code injection' in content (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/windows/local/persistence_image_exec_options.rb
+Documentation: documentation/modules/exploit/windows/local/persistence_image_exec_options.md
+Analysis: Score: 15 - MITRE: MITRE reference found: https://attack.mitre.org/techniques/T1183/ (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/linux/local/bash_profile_persistence.rb
+Documentation: documentation/modules/exploit/linux/local/bash_profile_persistence.md
+Analysis: Score: 15 - MITRE: MITRE reference found: https://attack.mitre.org/techniques/T1156/ (analyzed module source and documentation)
+----------------------------------------
+
+Module: evasion/windows/applocker_evasion_msbuild.rb
+Documentation: documentation/modules/evasion/windows/applocker_evasion_msbuild.md
+Analysis: Score: 15 - MITRE: MITRE reference found: https://attack.mitre.org/techniques/T1127/ (analyzed module source and documentation)
+----------------------------------------
+
+Module: evasion/windows/applocker_evasion_regasm_regsvcs.rb
+Documentation: documentation/modules/evasion/windows/applocker_evasion_regasm_regsvcs.md
+Analysis: Score: 15 - MITRE: MITRE reference found: https://attack.mitre.org/techniques/T1121/ (analyzed module source and documentation)
+----------------------------------------
+
+Module: evasion/windows/applocker_evasion_install_util.rb
+Documentation: documentation/modules/evasion/windows/applocker_evasion_install_util.md
+Analysis: Score: 15 - MITRE: MITRE reference found: https://attack.mitre.org/techniques/T1118/ (analyzed module source and documentation)
+----------------------------------------
+
+Module: post/windows/manage/install_python.rb
+Documentation: documentation/modules/post/windows/manage/install_python.md
+Analysis: Score: 15 - MITRE: MITRE reference found: https://attack.mitre.org/techniques/T1064/ (analyzed module source and documentation)
+----------------------------------------
+
+Module: post/windows/manage/multi_meterpreter_inject.rb
+Documentation: No documentation found
+Analysis: Score: 12 - MED: 'inject' in name/description; MED: 'memory' in name/description; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/windows/local/payload_inject.rb
+Documentation: documentation/modules/exploit/windows/local/payload_inject.md
+Analysis: Score: 12 - MED: 'inject' in name/description; MED: 'memory' in name/description; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/windows/mssql/ms09_004_sp_replwritetovarbin_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 10 - MED: 'inject' in name/description; MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: auxiliary/admin/scada/advantech_webaccess_dbvisitor_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 10 - MED: 'inject' in name/description; MED: 'dll' in name/description (analyzed module source only)
+----------------------------------------
+
+Module: payloads/stages/windows/vncinject.rb
+Documentation: No documentation found
+Analysis: Score: 10 - MED: 'inject' in name/description; HIGH: 'dll injection' in content; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: payloads/stages/windows/x64/vncinject.rb
+Documentation: No documentation found
+Analysis: Score: 10 - MED: 'inject' in name/description; HIGH: 'dll injection' in content; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/http/bassmaster_js_injection.rb
+Documentation: No documentation found
+Analysis: Score: 10 - MED: 'inject' in name/description; HIGH: 'code injection' in content; PATH: 'inject' in module path (analyzed module source only)
+----------------------------------------
+
+Module: exploits/multi/http/playsms_template_injection.rb
+Documentation: documentation/modules/exploit/multi/http/playsms_template_injection.md
+Analysis: Score: 10 - MED: 'inject' in name/description; HIGH: 'code injection' in content; PATH: 'inject' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: exploits/windows/browser/msvidctl_mpeg2.rb
+Documentation: No documentation found
+Analysis: Score: 10 - MED: 'dll' in name/description; MED: 'memory' in name/description (analyzed module source only)
+----------------------------------------
+

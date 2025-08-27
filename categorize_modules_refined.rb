@@ -157,6 +157,39 @@ class RefinedModuleCategorizer
     score
   end
 
+  def validate_module_with_ai(technique, cve_refs, module_path, module_content, doc_content)
+    # AI validation method - currently disabled, needs API configuration
+    # This method will be activated when AI API details are provided
+    
+    # Construct ATT&CK technique URL
+    technique_url = "https://attack.mitre.org/techniques/#{technique['id']}"
+    
+    # Prepare CVE URLs
+    cve_urls = cve_refs.map { |cve| "https://cveawg.mitre.org/api/cve/#{cve}" }
+    
+    # Prepare validation request data
+    validation_data = {
+      technique: {
+        id: technique['id'],
+        name: technique['name'],
+        url: technique_url
+      },
+      cve_urls: cve_urls,
+      module: {
+        path: module_path,
+        content: module_content
+      },
+      documentation: doc_content
+    }
+    
+    # TODO: Implement AI API call when configuration is provided
+    # For now, return true (allow all modules through)
+    # When implemented, this should return true/false based on AI validation
+    
+    puts "[INFO] AI validation disabled - module passed through without validation"
+    return true
+  end
+
   def read_module_file(module_path)
     # Read and parse a module file to extract key information
     begin
@@ -380,8 +413,32 @@ class RefinedModuleCategorizer
         is_related, reasoning = analyze_module_for_technique(module_path, technique)
 
         if is_related
-          rel_module_path = Pathname.new(module_path).relative_path_from(@repo_path).to_s
+          # Get module information for AI validation
+          module_info = read_module_file(module_path)
+          next unless module_info  # Skip if we can't read the module
+          
+          # Get documentation content
           doc_path = get_module_documentation_path(module_path)
+          doc_content = ""
+          if doc_path
+            doc_content = read_documentation_file(doc_path) || ""
+          end
+          
+          # Check if there are CVE references and perform AI validation if configured
+          cve_refs = module_info['cve_refs'] || []
+          
+          # Perform AI validation if CVEs are present
+          if !cve_refs.empty?
+            ai_validated = validate_module_with_ai(technique, cve_refs, module_path, module_info['content'], doc_content)
+            
+            # Skip this module if AI validation fails
+            unless ai_validated
+              puts "    SKIPPED: #{Pathname.new(module_path).relative_path_from(@repo_path).to_s} - AI validation failed"
+              next
+            end
+          end
+          
+          rel_module_path = Pathname.new(module_path).relative_path_from(@repo_path).to_s
           doc_path_str = doc_path ? doc_path.relative_path_from(@repo_path).to_s : "No documentation found"
 
           related_modules << {
@@ -429,7 +486,6 @@ class RefinedModuleCategorizer
 end
 
 def main
-  require 'pry';binding.pry
   repo_path = '/home/runner/work/metasploit-framework/metasploit-framework'
   opts = { web_query: false }
   if ARGV[0] && !ARGV[0].empty?

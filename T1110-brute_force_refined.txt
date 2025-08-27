@@ -2,17 +2,22 @@ MITRE ATT&CK Technique: T1110 - Brute Force
 Tactic: Credential Access
 Description: Adversaries may use brute force techniques to gain access to accounts when passwords are unknown
 
-Total related modules found: 79
+Total related modules found: 108
 ================================================================================
-
-Module: modules/auxiliary/scanner/http/joomla_bruteforce_login.rb
-Documentation: No documentation found
-Analysis: Score: 9 - MED: 'brute' in name/description; PATH: 'brute' in module path; PATH: 'login' in module path (analyzed module source only)
-----------------------------------------
 
 Module: modules/auxiliary/scanner/http/caidao_bruteforce_login.rb
 Documentation: No documentation found
 Analysis: Score: 9 - MED: 'brute' in name/description; PATH: 'brute' in module path; PATH: 'login' in module path (analyzed module source only)
+----------------------------------------
+
+Module: modules/exploits/windows/mssql/lyris_listmanager_weak_pass.rb
+Documentation: No documentation found
+Analysis: Score: 9 - HIGH: 'brute force' in content; CVE: CVE-2005-4145 analysis contributes 6 points (analyzed module source only)
+----------------------------------------
+
+Module: modules/exploits/osx/afp/loginext.rb
+Documentation: No documentation found
+Analysis: Score: 8 - PATH: 'login' in module path; CVE: CVE-2004-0430 analysis contributes 6 points (analyzed module source only)
 ----------------------------------------
 
 Module: modules/auxiliary/scanner/http/rdp_web_login.py
@@ -20,17 +25,32 @@ Documentation: documentation/modules/auxiliary/scanner/http/rdp_web_login.md
 Analysis: Score: 8 - HIGH: 'brute force' in content; HIGH: 'password brute' in content; PATH: 'login' in module path (analyzed module source and documentation)
 ----------------------------------------
 
-Module: modules/auxiliary/scanner/smb/smb_login.rb
-Documentation: documentation/modules/auxiliary/scanner/smb/smb_login.md
-Analysis: Score: 8 - HIGH: 'brute force' in content; HIGH: 'login brute' in content; PATH: 'login' in module path (analyzed module source and documentation)
+Module: modules/auxiliary/server/teamviewer_uri_smb_redirect.rb
+Documentation: documentation/modules/auxiliary/server/teamviewer_uri_smb_redirect.md
+Analysis: Score: 8 - CVE: CVE-2020-13699 analysis contributes 8 points (analyzed module source and documentation)
 ----------------------------------------
 
-Module: modules/auxiliary/scanner/oracle/sid_brute.rb
+Module: modules/exploits/multi/http/tomcat_mgr_upload.rb
+Documentation: documentation/modules/exploit/multi/http/tomcat_mgr_upload.md
+Analysis: Score: 8 - CVE: CVE-2009-4189 analysis contributes 2 points; CVE: CVE-2009-4188 analysis contributes 2 points; CVE: CVE-2010-4094 analysis contributes 2 points; CVE: CVE-2009-3548 analysis contributes 2 points (analyzed module source and documentation)
+----------------------------------------
+
+Module: modules/exploits/multi/http/tomcat_mgr_deploy.rb
+Documentation: documentation/modules/exploit/multi/http/tomcat_mgr_deploy.md
+Analysis: Score: 8 - CVE: CVE-2009-4189 analysis contributes 2 points; CVE: CVE-2009-4188 analysis contributes 2 points; CVE: CVE-2010-4094 analysis contributes 2 points; CVE: CVE-2009-3548 analysis contributes 2 points (analyzed module source and documentation)
+----------------------------------------
+
+Module: modules/exploits/windows/mssql/mssql_payload.rb
 Documentation: No documentation found
-Analysis: Score: 7 - MED: 'brute' in name/description; PATH: 'brute' in module path (analyzed module source only)
+Analysis: Score: 8 - CVE: CVE-2000-0402 analysis contributes 4 points; CVE: CVE-2000-1209 analysis contributes 4 points (analyzed module source only)
 ----------------------------------------
 
-Module: modules/auxiliary/scanner/http/sap_businessobjects_user_brute_web.rb
+Module: modules/exploits/windows/mssql/mssql_payload_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 8 - CVE: CVE-2000-0402 analysis contributes 4 points; CVE: CVE-2000-1209 analysis contributes 4 points (analyzed module source only)
+----------------------------------------
+
+Module: modules/auxiliary/gather/ibm_sametime_room_brute.rb
 Documentation: No documentation found
 Analysis: Score: 7 - MED: 'brute' in name/description; PATH: 'brute' in module path (analyzed module source only)
 ----------------------------------------
@@ -40,7 +60,12 @@ Documentation: No documentation found
 Analysis: Score: 7 - MED: 'brute' in name/description; PATH: 'brute' in module path (analyzed module source only)
 ----------------------------------------
 
-Module: modules/auxiliary/gather/ibm_sametime_room_brute.rb
+Module: modules/auxiliary/scanner/oracle/sid_brute.rb
+Documentation: No documentation found
+Analysis: Score: 7 - MED: 'brute' in name/description; PATH: 'brute' in module path (analyzed module source only)
+----------------------------------------
+
+Module: modules/auxiliary/scanner/http/sap_businessobjects_user_brute_web.rb
 Documentation: No documentation found
 Analysis: Score: 7 - MED: 'brute' in name/description; PATH: 'brute' in module path (analyzed module source only)
 ----------------------------------------
@@ -55,14 +80,124 @@ Documentation: documentation/modules/auxiliary/gather/nuuo_cms_bruteforce.md
 Analysis: Score: 7 - MED: 'brute' in name/description; PATH: 'brute' in module path (analyzed module source and documentation)
 ----------------------------------------
 
-Module: modules/auxiliary/admin/mssql/mssql_enum_domain_accounts_sqli.rb
+Module: modules/auxiliary/scanner/http/syncovery_linux_token_cve_2022_36536.rb
+Documentation: documentation/modules/auxiliary/scanner/http/syncovery_linux_token_cve_2022_36536.md
+Analysis: Score: 7 - MED: 'brute' in name/description; CVE: CVE-2022-36536 analysis contributes 2 points (analyzed module source and documentation)
+----------------------------------------
+
+Module: modules/auxiliary/scanner/telnet/brocade_enable_login.rb
+Documentation: documentation/modules/auxiliary/scanner/telnet/brocade_enable_login.md
+Analysis: Score: 7 - HIGH: 'login brute' in content; PATH: 'login' in module path; CVE: CVE-1999-0502 analysis contributes 2 points (analyzed module source and documentation)
+----------------------------------------
+
+Module: modules/auxiliary/scanner/vmware/vmauthd_login.rb
 Documentation: No documentation found
-Analysis: Score: 6 - HIGH: 'brute force' in content; HIGH: 'dictionary attack' in content (analyzed module source only)
+Analysis: Score: 7 - HIGH: 'brute force' in content; PATH: 'login' in module path; CVE: CVE-1999-0502 analysis contributes 2 points (analyzed module source only)
+----------------------------------------
+
+Module: modules/auxiliary/scanner/winrm/winrm_login.rb
+Documentation: documentation/modules/auxiliary/scanner/winrm/winrm_login.md
+Analysis: Score: 7 - HIGH: 'brute force' in content; PATH: 'login' in module path; CVE: CVE-1999-0502 analysis contributes 2 points (analyzed module source and documentation)
+----------------------------------------
+
+Module: modules/auxiliary/admin/http/iomega_storcenterpro_sessionid.rb
+Documentation: No documentation found
+Analysis: Score: 7 - HIGH: 'brute force' in content; CVE: CVE-2009-2367 analysis contributes 4 points (analyzed module source only)
+----------------------------------------
+
+Module: modules/exploits/linux/proxy/squid_ntlm_authenticate.rb
+Documentation: No documentation found
+Analysis: Score: 7 - HIGH: 'brute force' in content; CVE: CVE-2004-0541 analysis contributes 4 points (analyzed module source only)
+----------------------------------------
+
+Module: modules/auxiliary/scanner/http/fortimail_login_bypass_detection.rb
+Documentation: documentation/modules/auxiliary/scanner/http/fortimail_login_bypass_detection.md
+Analysis: Score: 6 - PATH: 'login' in module path; CVE: CVE-2020-9294 analysis contributes 4 points (analyzed module source and documentation)
+----------------------------------------
+
+Module: modules/exploits/linux/http/dlink_hnap_login_bof.rb
+Documentation: No documentation found
+Analysis: Score: 6 - PATH: 'login' in module path; CVE: CVE-2016-6563 analysis contributes 4 points (analyzed module source only)
+----------------------------------------
+
+Module: modules/exploits/windows/brightstor/lgserver_rxrlogin.rb
+Documentation: No documentation found
+Analysis: Score: 6 - PATH: 'login' in module path; CVE: CVE-2007-5003 analysis contributes 4 points (analyzed module source only)
+----------------------------------------
+
+Module: modules/auxiliary/scanner/rservices/rlogin_login.rb
+Documentation: documentation/modules/auxiliary/scanner/rservices/rlogin_login.md
+Analysis: Score: 6 - PATH: 'login' in module path; CVE: CVE-1999-0651 analysis contributes 2 points; CVE: CVE-1999-0502 analysis contributes 2 points (analyzed module source and documentation)
+----------------------------------------
+
+Module: modules/auxiliary/scanner/rservices/rexec_login.rb
+Documentation: documentation/modules/auxiliary/scanner/rservices/rexec_login.md
+Analysis: Score: 6 - PATH: 'login' in module path; CVE: CVE-1999-0651 analysis contributes 2 points; CVE: CVE-1999-0502 analysis contributes 2 points (analyzed module source and documentation)
+----------------------------------------
+
+Module: modules/auxiliary/scanner/rservices/rsh_login.rb
+Documentation: documentation/modules/auxiliary/scanner/rservices/rsh_login.md
+Analysis: Score: 6 - PATH: 'login' in module path; CVE: CVE-1999-0651 analysis contributes 2 points; CVE: CVE-1999-0502 analysis contributes 2 points (analyzed module source and documentation)
 ----------------------------------------
 
 Module: modules/auxiliary/admin/mssql/mssql_enum_domain_accounts.rb
 Documentation: No documentation found
 Analysis: Score: 6 - HIGH: 'brute force' in content; HIGH: 'dictionary attack' in content (analyzed module source only)
+----------------------------------------
+
+Module: modules/auxiliary/admin/mssql/mssql_enum_domain_accounts_sqli.rb
+Documentation: No documentation found
+Analysis: Score: 6 - HIGH: 'brute force' in content; HIGH: 'dictionary attack' in content (analyzed module source only)
+----------------------------------------
+
+Module: modules/auxiliary/admin/http/idsecure_auth_bypass.rb
+Documentation: documentation/modules/auxiliary/admin/http/idsecure_auth_bypass.md
+Analysis: Score: 6 - CVE: CVE-2023-6329 analysis contributes 6 points (analyzed module source and documentation)
+----------------------------------------
+
+Module: modules/exploits/multi/http/sonicwall_shell_injection_cve_2023_34124.rb
+Documentation: documentation/modules/exploit/multi/http/sonicwall_shell_injection_cve_2023_34124.md
+Analysis: Score: 6 - CVE: CVE-2023-34124 analysis contributes 2 points; CVE: CVE-2023-34132 analysis contributes 4 points (analyzed module source and documentation)
+----------------------------------------
+
+Module: modules/exploits/linux/http/cacti_unauthenticated_cmd_injection.rb
+Documentation: documentation/modules/exploit/linux/http/cacti_unauthenticated_cmd_injection.md
+Analysis: Score: 6 - CVE: CVE-2022-46169 analysis contributes 6 points (analyzed module source and documentation)
+----------------------------------------
+
+Module: modules/exploits/multi/veritas/beagent_sha_auth_rce.rb
+Documentation: documentation/modules/exploit/multi/veritas/beagent_sha_auth_rce.md
+Analysis: Score: 6 - CVE: CVE-2021-27876 analysis contributes 2 points; CVE: CVE-2021-27877 analysis contributes 2 points; CVE: CVE-2021-27878 analysis contributes 2 points (analyzed module source and documentation)
+----------------------------------------
+
+Module: modules/exploits/linux/ssh/ibm_drm_a3user.rb
+Documentation: documentation/modules/exploit/linux/ssh/ibm_drm_a3user.md
+Analysis: Score: 6 - CVE: CVE-2020-4429 analysis contributes 6 points (analyzed module source and documentation)
+----------------------------------------
+
+Module: modules/exploits/linux/http/wd_mycloud_unauthenticated_cmd_injection.rb
+Documentation: documentation/modules/exploit/linux/http/wd_mycloud_unauthenticated_cmd_injection.md
+Analysis: Score: 6 - CVE: CVE-2018-17153 analysis contributes 6 points (analyzed module source and documentation)
+----------------------------------------
+
+Module: modules/exploits/linux/http/trueonline_p660hn_v2_rce.rb
+Documentation: No documentation found
+Analysis: Score: 6 - CVE: CVE-2017-18370 analysis contributes 2 points; CVE: CVE-2017-18371 analysis contributes 4 points (analyzed module source only)
+----------------------------------------
+
+Module: modules/exploits/unix/ssh/tectia_passwd_changereq.rb
+Documentation: No documentation found
+Analysis: Score: 6 - CVE: CVE-2012-5975 analysis contributes 6 points (analyzed module source only)
+----------------------------------------
+
+Module: modules/auxiliary/scanner/http/ms09_020_webdav_unicode_bypass.rb
+Documentation: No documentation found
+Analysis: Score: 6 - CVE: CVE-2009-1535 analysis contributes 4 points; CVE: CVE-2009-1122 analysis contributes 2 points (analyzed module source only)
+----------------------------------------
+
+Module: modules/auxiliary/scanner/http/dir_webdav_unicode_bypass.rb
+Documentation: documentation/modules/auxiliary/scanner/http/dir_webdav_unicode_bypass.md
+Analysis: Score: 6 - CVE: CVE-2009-1535 analysis contributes 4 points; CVE: CVE-2009-1122 analysis contributes 2 points (analyzed module source and documentation)
 ----------------------------------------
 
 Module: modules/post/windows/gather/enum_ad_to_wordlist.rb
@@ -75,11 +210,6 @@ Documentation: documentation/modules/post/windows/gather/credentials/mdaemon_cre
 Analysis: Score: 5 - MED: 'crack' in name/description (analyzed module source and documentation)
 ----------------------------------------
 
-Module: modules/auxiliary/scanner/http/syncovery_linux_token_cve_2022_36536.rb
-Documentation: documentation/modules/auxiliary/scanner/http/syncovery_linux_token_cve_2022_36536.md
-Analysis: Score: 5 - MED: 'brute' in name/description (analyzed module source and documentation)
-----------------------------------------
-
 Module: modules/auxiliary/scanner/http/azure_ad_login.rb
 Documentation: documentation/modules/auxiliary/scanner/http/azure_ad_login.md
 Analysis: Score: 5 - HIGH: 'password brute' in content; PATH: 'login' in module path (analyzed module source and documentation)
@@ -87,11 +217,6 @@ Analysis: Score: 5 - HIGH: 'password brute' in content; PATH: 'login' in module 
 
 Module: modules/auxiliary/scanner/http/onion_omega2_login.py
 Documentation: documentation/modules/auxiliary/scanner/http/onion_omega2_login.md
-Analysis: Score: 5 - HIGH: 'login brute' in content; PATH: 'login' in module path (analyzed module source and documentation)
-----------------------------------------
-
-Module: modules/auxiliary/scanner/telnet/brocade_enable_login.rb
-Documentation: documentation/modules/auxiliary/scanner/telnet/brocade_enable_login.md
 Analysis: Score: 5 - HIGH: 'login brute' in content; PATH: 'login' in module path (analyzed module source and documentation)
 ----------------------------------------
 
@@ -105,7 +230,7 @@ Documentation: documentation/modules/auxiliary/scanner/acpp/login.md
 Analysis: Score: 5 - HIGH: 'dictionary attack' in content; PATH: 'login' in module path (analyzed module source and documentation)
 ----------------------------------------
 
-Module: modules/auxiliary/scanner/vmware/vmauthd_login.rb
+Module: modules/auxiliary/admin/oracle/oracle_login.rb
 Documentation: No documentation found
 Analysis: Score: 5 - HIGH: 'brute force' in content; PATH: 'login' in module path (analyzed module source only)
 ----------------------------------------
@@ -115,18 +240,8 @@ Documentation: No documentation found
 Analysis: Score: 5 - HIGH: 'brute force' in content; PATH: 'login' in module path (analyzed module source only)
 ----------------------------------------
 
-Module: modules/auxiliary/admin/oracle/oracle_login.rb
-Documentation: No documentation found
-Analysis: Score: 5 - HIGH: 'brute force' in content; PATH: 'login' in module path (analyzed module source only)
-----------------------------------------
-
-Module: modules/auxiliary/scanner/winrm/winrm_login.rb
-Documentation: documentation/modules/auxiliary/scanner/winrm/winrm_login.md
-Analysis: Score: 5 - HIGH: 'brute force' in content; PATH: 'login' in module path (analyzed module source and documentation)
-----------------------------------------
-
-Module: modules/auxiliary/scanner/http/directadmin_login.rb
-Documentation: documentation/modules/auxiliary/scanner/http/directadmin_login.md
+Module: modules/auxiliary/scanner/afp/afp_login.rb
+Documentation: documentation/modules/auxiliary/scanner/afp/afp_login.md
 Analysis: Score: 5 - HIGH: 'brute force' in content; PATH: 'login' in module path (analyzed module source and documentation)
 ----------------------------------------
 
@@ -135,17 +250,17 @@ Documentation: documentation/modules/auxiliary/scanner/http/buildmaster_login.md
 Analysis: Score: 5 - HIGH: 'brute force' in content; PATH: 'login' in module path (analyzed module source and documentation)
 ----------------------------------------
 
-Module: modules/auxiliary/scanner/afp/afp_login.rb
-Documentation: documentation/modules/auxiliary/scanner/afp/afp_login.md
+Module: modules/auxiliary/scanner/http/directadmin_login.rb
+Documentation: documentation/modules/auxiliary/scanner/http/directadmin_login.md
 Analysis: Score: 5 - HIGH: 'brute force' in content; PATH: 'login' in module path (analyzed module source and documentation)
 ----------------------------------------
 
-Module: modules/auxiliary/scanner/sap/sap_web_gui_brute_login.rb
+Module: modules/auxiliary/scanner/sap/sap_soap_rfc_brute_login.rb
 Documentation: No documentation found
 Analysis: Score: 35 - HIGH: 'brute force' in name/description; HIGH: 'login brute' in name/description; MED: 'brute' in name/description; HIGH: 'brute force' in content; HIGH: 'login brute' in content (analyzed module source only)
 ----------------------------------------
 
-Module: modules/auxiliary/scanner/sap/sap_soap_rfc_brute_login.rb
+Module: modules/auxiliary/scanner/sap/sap_web_gui_brute_login.rb
 Documentation: No documentation found
 Analysis: Score: 35 - HIGH: 'brute force' in name/description; HIGH: 'login brute' in name/description; MED: 'brute' in name/description; HIGH: 'brute force' in content; HIGH: 'login brute' in content (analyzed module source only)
 ----------------------------------------
@@ -175,6 +290,16 @@ Documentation: documentation/modules/auxiliary/scanner/http/zabbix_login.md
 Analysis: Score: 23 - HIGH: 'brute force' in name/description; MED: 'brute' in name/description; HIGH: 'brute force' in content; HIGH: 'dictionary attack' in content; PATH: 'login' in module path (analyzed module source and documentation)
 ----------------------------------------
 
+Module: modules/auxiliary/scanner/http/axis_login.rb
+Documentation: documentation/modules/auxiliary/scanner/http/axis_login.md
+Analysis: Score: 22 - HIGH: 'brute force' in name/description; MED: 'brute' in name/description; HIGH: 'brute force' in content; PATH: 'login' in module path; CVE: CVE-2010-0219 analysis contributes 2 points (analyzed module source and documentation)
+----------------------------------------
+
+Module: modules/auxiliary/scanner/http/wordpress_login_enum.rb
+Documentation: documentation/modules/auxiliary/scanner/http/wordpress_login_enum.md
+Analysis: Score: 22 - HIGH: 'brute force' in name/description; MED: 'brute' in name/description; HIGH: 'brute force' in content; PATH: 'login' in module path; CVE: CVE-2009-2335 analysis contributes 2 points (analyzed module source and documentation)
+----------------------------------------
+
 Module: modules/auxiliary/scanner/sap/sap_mgmt_con_brute_login.rb
 Documentation: No documentation found
 Analysis: Score: 22 - HIGH: 'brute force' in name/description; MED: 'brute' in name/description; HIGH: 'brute force' in content; PATH: 'brute' in module path; PATH: 'login' in module path (analyzed module source only)
@@ -185,11 +310,6 @@ Documentation: No documentation found
 Analysis: Score: 21 - HIGH: 'brute force' in name/description; MED: 'brute' in name/description; HIGH: 'brute force' in content; HIGH: 'login brute' in content (analyzed module source only)
 ----------------------------------------
 
-Module: modules/auxiliary/analyze/crack_windows.rb
-Documentation: documentation/modules/auxiliary/analyze/crack_windows.md
-Analysis: Score: 20 - HIGH: 'password crack' in name/description; MED: 'crack' in name/description; HIGH: 'password crack' in content; PATH: 'crack' in module path (analyzed module source and documentation)
-----------------------------------------
-
 Module: modules/auxiliary/analyze/crack_webapps.rb
 Documentation: documentation/modules/auxiliary/analyze/crack_webapps.md
 Analysis: Score: 20 - HIGH: 'password crack' in name/description; MED: 'crack' in name/description; HIGH: 'password crack' in content; PATH: 'crack' in module path (analyzed module source and documentation)
@@ -197,6 +317,11 @@ Analysis: Score: 20 - HIGH: 'password crack' in name/description; MED: 'crack' i
 
 Module: modules/auxiliary/analyze/crack_osx.rb
 Documentation: documentation/modules/auxiliary/analyze/crack_osx.md
+Analysis: Score: 20 - HIGH: 'password crack' in name/description; MED: 'crack' in name/description; HIGH: 'password crack' in content; PATH: 'crack' in module path (analyzed module source and documentation)
+----------------------------------------
+
+Module: modules/auxiliary/analyze/crack_windows.rb
+Documentation: documentation/modules/auxiliary/analyze/crack_windows.md
 Analysis: Score: 20 - HIGH: 'password crack' in name/description; MED: 'crack' in name/description; HIGH: 'password crack' in content; PATH: 'crack' in module path (analyzed module source and documentation)
 ----------------------------------------
 
@@ -210,13 +335,13 @@ Documentation: documentation/modules/auxiliary/analyze/crack_linux.md
 Analysis: Score: 20 - HIGH: 'password crack' in name/description; MED: 'crack' in name/description; HIGH: 'password crack' in content; PATH: 'crack' in module path (analyzed module source and documentation)
 ----------------------------------------
 
-Module: modules/auxiliary/analyze/crack_databases.rb
-Documentation: documentation/modules/auxiliary/analyze/crack_databases.md
+Module: modules/auxiliary/analyze/crack_aix.rb
+Documentation: documentation/modules/auxiliary/analyze/crack_aix.md
 Analysis: Score: 20 - HIGH: 'password crack' in name/description; MED: 'crack' in name/description; HIGH: 'password crack' in content; PATH: 'crack' in module path (analyzed module source and documentation)
 ----------------------------------------
 
-Module: modules/auxiliary/analyze/crack_aix.rb
-Documentation: documentation/modules/auxiliary/analyze/crack_aix.md
+Module: modules/auxiliary/analyze/crack_databases.rb
+Documentation: documentation/modules/auxiliary/analyze/crack_databases.md
 Analysis: Score: 20 - HIGH: 'password crack' in name/description; MED: 'crack' in name/description; HIGH: 'password crack' in content; PATH: 'crack' in module path (analyzed module source and documentation)
 ----------------------------------------
 
@@ -235,11 +360,6 @@ Documentation: No documentation found
 Analysis: Score: 20 - HIGH: 'login brute' in name/description; MED: 'brute' in name/description; HIGH: 'login brute' in content; PATH: 'brute' in module path (analyzed module source only)
 ----------------------------------------
 
-Module: modules/auxiliary/scanner/lotus/lotus_domino_login.rb
-Documentation: No documentation found
-Analysis: Score: 20 - HIGH: 'brute force' in name/description; MED: 'brute' in name/description; HIGH: 'brute force' in content; PATH: 'login' in module path (analyzed module source only)
-----------------------------------------
-
 Module: modules/auxiliary/scanner/http/glassfish_login.rb
 Documentation: No documentation found
 Analysis: Score: 20 - HIGH: 'brute force' in name/description; MED: 'brute' in name/description; HIGH: 'brute force' in content; PATH: 'login' in module path (analyzed module source only)
@@ -250,18 +370,13 @@ Documentation: No documentation found
 Analysis: Score: 20 - HIGH: 'brute force' in name/description; MED: 'brute' in name/description; HIGH: 'brute force' in content; PATH: 'login' in module path (analyzed module source only)
 ----------------------------------------
 
-Module: modules/auxiliary/scanner/http/wordpress_login_enum.rb
-Documentation: documentation/modules/auxiliary/scanner/http/wordpress_login_enum.md
-Analysis: Score: 20 - HIGH: 'brute force' in name/description; MED: 'brute' in name/description; HIGH: 'brute force' in content; PATH: 'login' in module path (analyzed module source and documentation)
+Module: modules/auxiliary/scanner/lotus/lotus_domino_login.rb
+Documentation: No documentation found
+Analysis: Score: 20 - HIGH: 'brute force' in name/description; MED: 'brute' in name/description; HIGH: 'brute force' in content; PATH: 'login' in module path (analyzed module source only)
 ----------------------------------------
 
 Module: modules/auxiliary/scanner/http/owa_login.rb
 Documentation: documentation/modules/auxiliary/scanner/http/owa_login.md
-Analysis: Score: 20 - HIGH: 'brute force' in name/description; MED: 'brute' in name/description; HIGH: 'brute force' in content; PATH: 'login' in module path (analyzed module source and documentation)
-----------------------------------------
-
-Module: modules/auxiliary/scanner/http/axis_login.rb
-Documentation: documentation/modules/auxiliary/scanner/http/axis_login.md
 Analysis: Score: 20 - HIGH: 'brute force' in name/description; MED: 'brute' in name/description; HIGH: 'brute force' in content; PATH: 'login' in module path (analyzed module source and documentation)
 ----------------------------------------
 
@@ -285,9 +400,9 @@ Documentation: documentation/modules/auxiliary/scanner/http/brute_dirs.md
 Analysis: Score: 20 - HIGH: 'brute force' in name/description; MED: 'brute' in name/description; HIGH: 'brute force' in content; PATH: 'brute' in module path (analyzed module source and documentation)
 ----------------------------------------
 
-Module: modules/auxiliary/scanner/http/vhost_scanner.rb
-Documentation: No documentation found
-Analysis: Score: 18 - HIGH: 'brute force' in name/description; MED: 'brute' in name/description; HIGH: 'brute force' in content (analyzed module source only)
+Module: modules/auxiliary/scanner/db2/db2_auth.rb
+Documentation: documentation/modules/auxiliary/scanner/db2/db2_auth.md
+Analysis: Score: 20 - HIGH: 'brute force' in name/description; MED: 'brute' in name/description; HIGH: 'brute force' in content; CVE: CVE-1999-0502 analysis contributes 2 points (analyzed module source and documentation)
 ----------------------------------------
 
 Module: modules/auxiliary/scanner/http/soap_xml.rb
@@ -295,18 +410,18 @@ Documentation: No documentation found
 Analysis: Score: 18 - HIGH: 'brute force' in name/description; MED: 'brute' in name/description; HIGH: 'brute force' in content (analyzed module source only)
 ----------------------------------------
 
-Module: modules/post/hardware/rftransceiver/rfpwnon.rb
-Documentation: documentation/modules/post/hardware/rftransceiver/rfpwnon.md
-Analysis: Score: 18 - HIGH: 'brute force' in name/description; MED: 'brute' in name/description; HIGH: 'brute force' in content (analyzed module source and documentation)
-----------------------------------------
-
-Module: modules/auxiliary/scanner/db2/db2_auth.rb
-Documentation: documentation/modules/auxiliary/scanner/db2/db2_auth.md
-Analysis: Score: 18 - HIGH: 'brute force' in name/description; MED: 'brute' in name/description; HIGH: 'brute force' in content (analyzed module source and documentation)
+Module: modules/auxiliary/scanner/http/vhost_scanner.rb
+Documentation: No documentation found
+Analysis: Score: 18 - HIGH: 'brute force' in name/description; MED: 'brute' in name/description; HIGH: 'brute force' in content (analyzed module source only)
 ----------------------------------------
 
 Module: modules/auxiliary/admin/netbios/netbios_spoof.rb
 Documentation: documentation/modules/auxiliary/admin/netbios/netbios_spoof.md
+Analysis: Score: 18 - HIGH: 'brute force' in name/description; MED: 'brute' in name/description; HIGH: 'brute force' in content (analyzed module source and documentation)
+----------------------------------------
+
+Module: modules/post/hardware/rftransceiver/rfpwnon.rb
+Documentation: documentation/modules/post/hardware/rftransceiver/rfpwnon.md
 Analysis: Score: 18 - HIGH: 'brute force' in name/description; MED: 'brute' in name/description; HIGH: 'brute force' in content (analyzed module source and documentation)
 ----------------------------------------
 
@@ -345,24 +460,24 @@ Documentation: documentation/modules/auxiliary/scanner/http/cisco_asa_asdm_brute
 Analysis: Score: 13 - MED: 'brute' in name/description; HIGH: 'brute force' in content; HIGH: 'login brute' in content; PATH: 'brute' in module path (analyzed module source and documentation)
 ----------------------------------------
 
+Module: modules/auxiliary/scanner/http/tomcat_mgr_login.rb
+Documentation: documentation/modules/auxiliary/scanner/http/tomcat_mgr_login.md
+Analysis: Score: 12 - PATH: 'login' in module path; CVE: CVE-2009-4189 analysis contributes 2 points; CVE: CVE-2009-4188 analysis contributes 2 points; CVE: CVE-2010-4094 analysis contributes 2 points; CVE: CVE-2009-3548 analysis contributes 2 points (analyzed module source and documentation)
+----------------------------------------
+
+Module: modules/exploits/linux/http/ibm_drm_rce.rb
+Documentation: documentation/modules/exploit/linux/http/ibm_drm_rce.md
+Analysis: Score: 12 - CVE: CVE-2020-4427 analysis contributes 4 points; CVE: CVE-2020-4428 analysis contributes 2 points; CVE: CVE-2020-4429 analysis contributes 6 points (analyzed module source and documentation)
+----------------------------------------
+
+Module: modules/auxiliary/scanner/http/joomla_bruteforce_login.rb
+Documentation: No documentation found
+Analysis: Score: 11 - MED: 'brute' in name/description; PATH: 'brute' in module path; PATH: 'login' in module path; CVE: CVE-1999-0502 analysis contributes 2 points (analyzed module source only)
+----------------------------------------
+
 Module: modules/auxiliary/scanner/http/rfcode_reader_enum.rb
 Documentation: No documentation found
 Analysis: Score: 11 - MED: 'brute' in name/description; HIGH: 'brute force' in content; HIGH: 'password brute' in content (analyzed module source only)
-----------------------------------------
-
-Module: modules/auxiliary/scanner/http/sentry_cdu_enum.rb
-Documentation: No documentation found
-Analysis: Score: 11 - MED: 'brute' in name/description; HIGH: 'brute force' in content; HIGH: 'login brute' in content (analyzed module source only)
-----------------------------------------
-
-Module: modules/auxiliary/scanner/http/radware_appdirector_enum.rb
-Documentation: No documentation found
-Analysis: Score: 11 - MED: 'brute' in name/description; HIGH: 'brute force' in content; HIGH: 'login brute' in content (analyzed module source only)
-----------------------------------------
-
-Module: modules/auxiliary/scanner/http/infovista_enum.rb
-Documentation: No documentation found
-Analysis: Score: 11 - MED: 'brute' in name/description; HIGH: 'brute force' in content; HIGH: 'login brute' in content (analyzed module source only)
 ----------------------------------------
 
 Module: modules/auxiliary/scanner/http/cisco_ssl_vpn.rb
@@ -375,9 +490,19 @@ Documentation: No documentation found
 Analysis: Score: 11 - MED: 'brute' in name/description; HIGH: 'brute force' in content; HIGH: 'login brute' in content (analyzed module source only)
 ----------------------------------------
 
-Module: modules/auxiliary/scanner/http/fortinet_ssl_vpn.rb
-Documentation: documentation/modules/auxiliary/scanner/http/fortinet_ssl_vpn.md
-Analysis: Score: 11 - MED: 'brute' in name/description; HIGH: 'brute force' in content; HIGH: 'login brute' in content (analyzed module source and documentation)
+Module: modules/auxiliary/scanner/http/radware_appdirector_enum.rb
+Documentation: No documentation found
+Analysis: Score: 11 - MED: 'brute' in name/description; HIGH: 'brute force' in content; HIGH: 'login brute' in content (analyzed module source only)
+----------------------------------------
+
+Module: modules/auxiliary/scanner/http/sentry_cdu_enum.rb
+Documentation: No documentation found
+Analysis: Score: 11 - MED: 'brute' in name/description; HIGH: 'brute force' in content; HIGH: 'login brute' in content (analyzed module source only)
+----------------------------------------
+
+Module: modules/auxiliary/scanner/http/infovista_enum.rb
+Documentation: No documentation found
+Analysis: Score: 11 - MED: 'brute' in name/description; HIGH: 'brute force' in content; HIGH: 'login brute' in content (analyzed module source only)
 ----------------------------------------
 
 Module: modules/auxiliary/scanner/http/cisco_asa_clientless_vpn.rb
@@ -385,7 +510,12 @@ Documentation: documentation/modules/auxiliary/scanner/http/cisco_asa_clientless
 Analysis: Score: 11 - MED: 'brute' in name/description; HIGH: 'brute force' in content; HIGH: 'login brute' in content (analyzed module source and documentation)
 ----------------------------------------
 
-Module: modules/post/multi/gather/dns_bruteforce.rb
+Module: modules/auxiliary/scanner/http/fortinet_ssl_vpn.rb
+Documentation: documentation/modules/auxiliary/scanner/http/fortinet_ssl_vpn.md
+Analysis: Score: 11 - MED: 'brute' in name/description; HIGH: 'brute force' in content; HIGH: 'login brute' in content (analyzed module source and documentation)
+----------------------------------------
+
+Module: modules/auxiliary/gather/citrix_published_bruteforce.rb
 Documentation: No documentation found
 Analysis: Score: 10 - MED: 'brute' in name/description; HIGH: 'brute force' in content; PATH: 'brute' in module path (analyzed module source only)
 ----------------------------------------
@@ -395,8 +525,23 @@ Documentation: No documentation found
 Analysis: Score: 10 - MED: 'brute' in name/description; HIGH: 'brute force' in content; PATH: 'brute' in module path (analyzed module source only)
 ----------------------------------------
 
-Module: modules/auxiliary/gather/citrix_published_bruteforce.rb
+Module: modules/post/multi/gather/dns_bruteforce.rb
 Documentation: No documentation found
 Analysis: Score: 10 - MED: 'brute' in name/description; HIGH: 'brute force' in content; PATH: 'brute' in module path (analyzed module source only)
+----------------------------------------
+
+Module: modules/auxiliary/scanner/smb/smb_login.rb
+Documentation: documentation/modules/auxiliary/scanner/smb/smb_login.md
+Analysis: Score: 10 - HIGH: 'brute force' in content; HIGH: 'login brute' in content; PATH: 'login' in module path; CVE: CVE-1999-0506 analysis contributes 2 points (analyzed module source and documentation)
+----------------------------------------
+
+Module: modules/auxiliary/admin/http/ibm_drm_download.rb
+Documentation: documentation/modules/auxiliary/admin/http/ibm_drm_download.md
+Analysis: Score: 10 - CVE: CVE-2020-4427 analysis contributes 4 points; CVE: CVE-2020-4429 analysis contributes 6 points (analyzed module source and documentation)
+----------------------------------------
+
+Module: modules/exploits/linux/http/ibm_qradar_unauth_rce.rb
+Documentation: documentation/modules/exploit/linux/http/ibm_qradar_unauth_rce.md
+Analysis: Score: 10 - CVE: CVE-2016-9722 analysis contributes 2 points; CVE: CVE-2018-1418 analysis contributes 4 points; CVE: CVE-2018-1612 analysis contributes 4 points (analyzed module source and documentation)
 ----------------------------------------
 

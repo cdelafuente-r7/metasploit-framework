@@ -131,6 +131,9 @@ protected
 
     # Try to read a response
     rbuf = sock.get_once
+    while tmpbuf = sock.get_once(-1, 1)
+      rbuf << tmpbuf
+    end
 
     # If it contains our string, then we rock
     if (rbuf =~ /#{ebuf}/)
